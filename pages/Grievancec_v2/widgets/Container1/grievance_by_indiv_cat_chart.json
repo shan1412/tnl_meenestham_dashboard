@@ -4,7 +4,7 @@
   "allowScroll": false,
   "animateLoading": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 149.79687500000009,
+  "bottomRow": 149.79687500000006,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "chartData": {
     "5zz1dwyawa": {
@@ -129,7 +129,7 @@
   "tags": [
     "Display"
   ],
-  "topRow": 119.79687500000009,
+  "topRow": 119.79687500000007,
   "type": "CHART_WIDGET",
   "version": 1,
   "widgetId": "kd40akg6o1",
