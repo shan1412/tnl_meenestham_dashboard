@@ -3,43 +3,18 @@ export default {
   myVar2: {},
 
   myFun1() {
-    const selected_grievance_time_line = appsmith.store.grievence_time_line || '';
-    const selectedGranularity = appsmith.store.granularity_datapoint || '';
-    const selectedGrievanceageReport = appsmith.store.grievance_age_data_point || '';
-    const selectedGrievanceRequestType = appsmith.store.grievanceRequestType_name || '';
-    const selectGrievanceByConstituency = appsmith.store.grievence_by_constituency || '';
-    const selectGrievanceByPc = appsmith.store.grievence_by_parliament_constituency || '';
-    const selectGrievanceByMandal = appsmith.store.grievence_by_mandal || '';
-    const selectGrievanceByVillage = appsmith.store.grievence_by_village || '';
-    const selectedGrievancePriority = appsmith.store.priority_datapoint || '';
-    const selectGrievanceByLocationspecific = appsmith.store.grievance_locationSpecific || '';
-
-    const selected_ac_names = appsmith.store.selected_ac_names || [];
-    const selected_grievance_mandal = appsmith.store.selected_grivence_Mandal || [];
-    const selected_grievance_village = appsmith.store.selected_griveance_villages || [];
-
-    const filteredData = grievancedataset_tnl.data.filter(req =>
-      ["Done","No Action Required"].includes(req.grievance_status) &&
-      (selectedGranularity === '' || selectedGranularity.includes(req.location_granularity)) &&
-      (selectedGrievanceRequestType === '' || selectedGrievanceRequestType.includes(req.grievance_type)) &&
-      (selectGrievanceByConstituency === '' || selectGrievanceByConstituency.includes(req.request_ac_name)) &&
-      (selectGrievanceByMandal === '' || selectGrievanceByMandal.includes(req.request_mandal)) &&
-      (selectGrievanceByVillage === '' || selectGrievanceByVillage.includes(req.request_village)) &&
-      (selectedGrievancePriority === '' || selectedGrievancePriority.includes(req.priority)) &&
-      (selectedGrievanceageReport === '' || selectedGrievanceageReport.includes(req.age_category)) &&
-      (selectGrievanceByPc === '' || selectGrievanceByPc.includes(req.request_pc_name)) &&
-      (selectGrievanceByLocationspecific === '' || selectGrievanceByLocationspecific.includes(req.is_location_specific)) &&
-      (selected_ac_names.length === 0 || selected_ac_names.includes(req.request_ac_name)) &&
-      (selected_grievance_mandal.length === 0 || selected_grievance_mandal.includes(req.grievance_type)) &&
-      (selected_grievance_village.length === 0 || selected_grievance_village.includes(req.request_village))
-    );
-
-    // Get the count of filtered grievances
-    const grievanceCount = filteredData.length;
+      // Filter the dataset based on selected filters
+    const filteredData = utills.filterDataPoints({
+        data: grievancedataset_tnl.data,
+        filterTypes: '*',
+        excludeTypes: []
+    });
+		// Get the count of filtered grievances
+    const grievanceCount = filteredData.filter(req =>!["In Progress","Draft","Verified","In Review","Send For Correction"].includes(req.grievance_status)).length;
 
     // Aggregate based on the 'source' column, counting occurrences of each source
-    const sourceAggregation = filteredData.reduce((acc, req) => {
-      const source = req.source || 'Unknown'; // Handle cases where 'source' might be missing
+    const sourceAggregation = filteredData.filter(req =>!["In Progress","Draft","Verified","In Review","Send For Correction"].includes(req.grievance_status)).reduce((acc, req) => {
+      const source = req.source || ' '; // Handle cases where 'source' might be missing
       if (!acc[source]) {
         acc[source] = { count: 0, totalAgeInDays: 0 };
       }
@@ -66,7 +41,7 @@ export default {
     }, {});
 
     // Calculate the overall average age
-    const totalAgeInDays = filteredData.reduce((sum, req) => sum + (req.age_in_days || 0), 0);
+    const totalAgeInDays = filteredData.filter(req =>!["In Progress","Draft","Verified","In Review","Send For Correction"].includes(req.grievance_status)).reduce((sum, req) => sum + (req.age_in_days || 0), 0);
     const avgAgeInDaysOverall = filteredData.length > 0 ? totalAgeInDays / filteredData.length : 0;
     const overallDays = Math.floor(avgAgeInDaysOverall);
     const overallHours = Math.floor((avgAgeInDaysOverall - overallDays) * 24);

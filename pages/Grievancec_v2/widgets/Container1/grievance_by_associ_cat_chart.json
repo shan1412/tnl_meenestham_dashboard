@@ -4,7 +4,7 @@
   "allowScroll": false,
   "animateLoading": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 149.15937500000004,
+  "bottomRow": 150.83906250000013,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "chartData": {
     "5zz1dwyawa": {
@@ -109,11 +109,11 @@
   "labelOrientation": "auto",
   "leftColumn": 32,
   "minWidth": 450,
-  "mobileBottomRow": 338.7374999999994,
+  "mobileBottomRow": 338.7374999999991,
   "mobileLeftColumn": 0,
   "mobileRightColumn": 64,
-  "mobileTopRow": 306.7374999999996,
-  "onDataPointClick": "{{grievance_by_associ_cat.myFun1();\ntotal_closed_grivevances__coun.myFun1();\ntotal_open_grievances_count.myFun1();\ntotal_grievances_count.myFun1();\naverage_ticket_time.myFun1();}}",
+  "mobileTopRow": 306.73749999999944,
+  "onDataPointClick": "{{grievance_by_associ_cat.myFun1();\ntotal_closed_grivevances__coun.myFun1();\ntotal_grievances_count.myFun1();\naverage_ticket_time.myFun1();\ntotal_open_grievances_count.myFun1();}}",
   "parentColumnSpace": 11.890625,
   "parentId": "zjg87kjyes",
   "parentRowSpace": 10,
@@ -129,7 +129,7 @@
   "tags": [
     "Display"
   ],
-  "topRow": 119.15937500000004,
+  "topRow": 120.83906250000005,
   "type": "CHART_WIDGET",
   "version": 1,
   "widgetId": "rg8zfuoein",
