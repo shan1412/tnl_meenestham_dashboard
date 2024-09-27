@@ -6,7 +6,7 @@ export default {
 
     // Filter the dataset based on selected filters
     const filteredData = requestor_utils.filterDataPoints({
-      data: requestordataset_dev.data,
+      data: requestordataset_tnl.data,
       filterTypes: '*',
       excludeTypes: []
     });

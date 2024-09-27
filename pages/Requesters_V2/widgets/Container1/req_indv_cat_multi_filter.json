@@ -48,10 +48,10 @@
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 76.9953125,
+  "mobileBottomRow": 55.8,
   "mobileLeftColumn": 0,
   "mobileRightColumn": 64,
-  "mobileTopRow": 70.3953125,
+  "mobileTopRow": 49.2,
   "onOptionChange": "{{storeValue('req_indv_cat_selected_values', req_indv_cat_multi_filter.selectedOptionLabels);\ntotal_data_counts.myFun1();}}",
   "optionLabel": "name",
   "optionValue": "code",
@@ -61,7 +61,7 @@
   "placeholderText": "Select option(s)",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 13.229974160206718,
+  "rightColumn": 32.611464968152866,
   "searchTags": [
     "dropdown",
     "tags"

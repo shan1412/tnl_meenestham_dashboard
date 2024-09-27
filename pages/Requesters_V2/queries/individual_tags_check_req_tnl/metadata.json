@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "select distinct coalesce(\"ReportingCategory\",\"TagType\") \"Tags\" from masters.\"TagList\" tl\nwhere \"TagType\" = 'RequestorType' and \"ClientKey\" = {{load_login_ui_elements_db.data.Data.ClientKey}}",
+      "body": "select distinct coalesce(\"ReportingCategory\",\"TagType\") \"Tags\" from masters.\"TagList\" tl\nwhere \"TagType\" = 'RequestorType' and \"ClientKey\" = {{appsmith.URL.queryParams.client_key}}",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

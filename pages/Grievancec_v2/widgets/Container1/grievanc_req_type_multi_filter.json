@@ -48,10 +48,10 @@
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 73.23749999999998,
+  "mobileBottomRow": 77.07500000000003,
   "mobileLeftColumn": 0,
   "mobileRightColumn": 64,
-  "mobileTopRow": 66.63749999999999,
+  "mobileTopRow": 70.47500000000001,
   "onOptionChange": "{{storeValue('selected_griveance_type_selected_values', grievanc_req_type_multi_filter.selectedOptionLabels);\ntotal_open_grievances_count.myFun1();\ntotal_grievances_count.myFun1();\ntotal_closed_grivevances__coun.myFun1();\naverage_ticket_time.myFun1();}}",
   "optionLabel": "name",
   "optionValue": "code",
@@ -61,17 +61,17 @@
   "placeholderText": "Select option(s)",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 31.801242236024844,
+  "rightColumn": 15.058823529411764,
   "searchTags": [
     "dropdown",
     "tags"
   ],
   "serverSideFiltering": false,
-  "sourceData": "{{\n(() => {\n\nconst filteredData = utills.filterDataPoints({\n    data: grievancesdataset_dev.data,\n    filterTypes: '*',\n    excludeTypes: ['TypeNames']  // Add 'excludeAll' to exclude all filters\n});\n\n  // Use the declared variable in your existing code\n  return _.uniqBy(filteredData.filter(req=>req.grievance_type_key>0).map(req => ({ \n    name: req.grievance_type,\n    code: req.grievance_type_key\n  })), 'code');\n})()\n}}",
+  "sourceData": "{{\n(() => {\n\nconst filteredData = utills.filterDataPoints({\n    data: grievancedataset_tnl.data,\n    filterTypes: '*',\n    excludeTypes: ['TypeNames']  // Add 'excludeAll' to exclude all filters\n});\n\n  // Use the declared variable in your existing code\n  return _.uniqBy(filteredData.filter(req=>req.grievance_type_key>0).map(req => ({ \n    name: req.grievance_type,\n    code: req.grievance_type_key\n  })), 'code');\n})()\n}}",
   "tags": [
     "Select"
   ],
-  "topRow": 13.196875000000002,
+  "topRow": 13.196874999999999,
   "type": "MULTI_SELECT_WIDGET_V2",
   "version": 1,
   "widgetId": "vychxgyy47",

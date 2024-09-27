@@ -22,7 +22,7 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "fullyQualifiedName": "requestor_utils.myFun1",
     "name": "myFun1",
     "pageId": "Requesters_V2",

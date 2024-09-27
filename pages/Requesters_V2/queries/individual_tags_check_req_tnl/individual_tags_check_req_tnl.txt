@@ -1,2 +1,2 @@
 select distinct coalesce("ReportingCategory","TagType") "Tags" from masters."TagList" tl
-where "TagType" = 'RequestorType' and "ClientKey" = {{load_login_ui_elements_db.data.Data.ClientKey}}
+where "TagType" = 'RequestorType' and "ClientKey" = {{appsmith.URL.queryParams.client_key}}

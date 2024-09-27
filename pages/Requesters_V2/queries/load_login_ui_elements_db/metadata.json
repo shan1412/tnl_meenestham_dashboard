@@ -23,7 +23,7 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "name": "load_login_ui_elements_db",
     "pageId": "Requesters_V2",
     "userSetOnLoad": false

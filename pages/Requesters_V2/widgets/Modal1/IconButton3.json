@@ -29,7 +29,7 @@
   "minWidth": 50,
   "mobileBottomRow": 11.200000000000012,
   "mobileLeftColumn": 0,
-  "mobileRightColumn": 13.577300450808805,
+  "mobileRightColumn": 8.032632569814874,
   "mobileTopRow": 6.3999999999999995,
   "needsErrorInfo": false,
   "onClick": "{{closeModal(Modal1.name);}}",
