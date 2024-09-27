@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "66f68c3bce77550208297f72_63a8004d-c8c6-4ad0-ab9b-b50d4c9a2475",
-  "id": "Requesters_V2_requestordataset_tnl",
+  "gitSyncId": "66f68c3bce77550208297f72_38ff5e15-7843-452b-bcfb-715468ced52c",
+  "id": "Grievancec_v2_fetch_origin",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "select * from hubviews.vw_requestordataset WHERE \"client_key\" = {{appsmith.URL.queryParams.client_key}}",
+      "body": "select\n\t*\nfrom\n\tconfigdb.connections.\"ClientOriginInfo\"\nwhere\n\t\"ClientKey\" = {{appsmith.URL.queryParams.client_key}}\n\tand \"Origin\" not like '%localhost%';\n ",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,9 +27,9 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": true,
-    "name": "requestordataset_tnl",
-    "pageId": "Requesters_V2",
+    "executeOnLoad": false,
+    "name": "fetch_origin",
+    "pageId": "Grievancec_v2",
     "userSetOnLoad": false
   }
 }

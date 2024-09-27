@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "66f68c3bce77550208297f72_63a8004d-c8c6-4ad0-ab9b-b50d4c9a2475",
-  "id": "Requesters_V2_requestordataset_tnl",
+  "gitSyncId": "66f68c3bce77550208297f72_e46676de-41ac-46d1-9969-92d9d00d185c",
+  "id": "Requesters_V2_ui_elements_tnl",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "select * from hubviews.vw_requestordataset WHERE \"client_key\" = {{appsmith.URL.queryParams.client_key}}",
+      "body": "select * from connecthub.\"ClientInfo\" ci where \"ClientKey\" = {{appsmith.URL.queryParams.client_key}}",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -28,7 +28,7 @@
       }
     ],
     "executeOnLoad": true,
-    "name": "requestordataset_tnl",
+    "name": "ui_elements_tnl",
     "pageId": "Requesters_V2",
     "userSetOnLoad": false
   }

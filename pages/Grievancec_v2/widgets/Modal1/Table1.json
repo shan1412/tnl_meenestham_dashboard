@@ -856,7 +856,7 @@
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "columnType": "url",
-      "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( appsmith.URL.fullPath + '/request/view/' + currentRow[\"grievance_key\"] + '/'))}}",
+      "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( 'https://dev-tnl.meenestham.in/request/view/' + currentRow[\"grievance_key\"] + '/'))}}",
       "currencyCode": "USD",
       "decimals": 0,
       "displayText": "View",

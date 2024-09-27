@@ -4,7 +4,7 @@
   "allowSelectAll": false,
   "animateLoading": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 20.839062499999997,
+  "bottomRow": 19.796875,
   "boxShadow": "none",
   "defaultOptionValue": "",
   "displayName": "MultiSelect",
@@ -48,10 +48,10 @@
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 76.43749999999997,
+  "mobileBottomRow": 73.23749999999998,
   "mobileLeftColumn": 0,
   "mobileRightColumn": 64,
-  "mobileTopRow": 69.83749999999998,
+  "mobileTopRow": 66.63749999999999,
   "onOptionChange": "{{storeValue('selected_griveance_type_selected_values', grievanc_req_type_multi_filter.selectedOptionLabels);\ntotal_open_grievances_count.myFun1();\ntotal_grievances_count.myFun1();\ntotal_closed_grivevances__coun.myFun1();\naverage_ticket_time.myFun1();}}",
   "optionLabel": "name",
   "optionValue": "code",
@@ -61,7 +61,7 @@
   "placeholderText": "Select option(s)",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 15.058823529411764,
+  "rightColumn": 31.801242236024844,
   "searchTags": [
     "dropdown",
     "tags"
@@ -71,7 +71,7 @@
   "tags": [
     "Select"
   ],
-  "topRow": 14.2390625,
+  "topRow": 13.196875000000002,
   "type": "MULTI_SELECT_WIDGET_V2",
   "version": 1,
   "widgetId": "vychxgyy47",

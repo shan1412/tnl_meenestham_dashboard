@@ -2,7 +2,7 @@
   "alignment": "start",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 11.0390625,
+  "bottomRow": 9.996875000000001,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -29,7 +29,7 @@
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 8.959375,
+  "mobileBottomRow": 8.959375000000001,
   "mobileLeftColumn": 0,
   "mobileRightColumn": 64,
   "mobileTopRow": 4.8,
@@ -40,12 +40,12 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 54.51851851851851,
+  "rightColumn": 54.51851851851852,
   "shouldTruncate": false,
   "text": "Meenestham: {{ average_ticket_time.myFun1.data.sourceAggregation?.Meenestham?.avgAge || ' ' }}\nPGRS: {{ average_ticket_time.myFun1.data.sourceAggregation?.PGRS?.avgAge || ' ' }}\n",
   "textAlign": "LEFT",
   "textColor": "#999999",
-  "topRow": 5.2,
+  "topRow": 5.8375,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
