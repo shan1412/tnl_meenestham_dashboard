@@ -1,0 +1,24 @@
+{
+  "gitSyncId": "66daa2a0ce775502082970ac_e63ec88c-6bdf-4f66-82c3-d7319d39af69",
+  "id": "Party_cader_v2_gender_age_store",
+  "unpublishedCollection": {
+    "name": "gender_age_store",
+    "pageId": "Party_cader_v2",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      },
+      {
+        "name": "gender_hl",
+        "value": "''"
+      }
+    ]
+  }
+}

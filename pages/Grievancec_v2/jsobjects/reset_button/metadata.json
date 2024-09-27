@@ -1,0 +1,20 @@
+{
+  "gitSyncId": "66d54fc7ce77550208296c31_5a68bb59-69bc-4d1d-b819-b94f86103c86",
+  "id": "Grievancec_v2_reset_button",
+  "unpublishedCollection": {
+    "name": "reset_button",
+    "pageId": "Grievancec_v2",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      }
+    ]
+  }
+}

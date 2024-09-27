@@ -1,0 +1,24 @@
+{
+  "gitSyncId": "66d076092736952ca76d2bd0_66d0c1292736952ca76d2c70",
+  "id": "Grievancec_v2_grievance_granularity",
+  "unpublishedCollection": {
+    "name": "grievance_granularity",
+    "pageId": "Grievancec_v2",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      },
+      {
+        "name": "gender_hl",
+        "value": "''"
+      }
+    ]
+  }
+}

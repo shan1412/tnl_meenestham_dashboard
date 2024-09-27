@@ -1,0 +1,1 @@
+SELECT * FROM connecthub."party_cader_dummy_data_set";

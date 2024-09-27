@@ -1,0 +1,140 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignment": "start",
+  "allowScroll": false,
+  "animateLoading": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 81.55781250000001,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "chartData": {
+    "lgwz05z0w9": {
+      "data": [
+        {
+          "x": "Product1",
+          "y": 20000
+        },
+        {
+          "x": "Product2",
+          "y": 22000
+        },
+        {
+          "x": "Product3",
+          "y": 32000
+        }
+      ],
+      "seriesName": "2023"
+    }
+  },
+  "chartName": "Sales Report",
+  "chartType": "CUSTOM_ECHART",
+  "customEChartConfig": "{{ ((chartType) => ( (() => {\n    // Retrieve selected filter values\n    const { selectedGrievanceageReport, chart_color_palette } = utills.getFilters();\n\n    // Filter the dataset based on selected filters\n    const filteredData = utills.filterDataPoints({\n        data: grievancesdataset_dev.data,\n        filterTypes: '*',\n        excludeTypes: ['AgeReport']\n    });\n\n    // Define the order for age categories\n    const ageCategoryOrder = [\n        \"0-10 days\", \"11-20 days\", \"21-30 days\",\n        \"31-40 days\", \"41-50 days\", \"51-60 days\",\n        \"61-70 days\", \"71-80 days\", \"81-90 days\",\n        \"91-100 days\", \"100+ days\"\n    ];\n\n    // Filter only the relevant statuses\n    const relevantStatuses = [\"In Progress\", \"Draft\", \"Verified\", \"In Review\", \"Send For Correction\"];\n    const statusFilteredData = filteredData.filter(req => relevantStatuses.includes(req.grievance_status));\n\n    // Aggregate data by grievance age category and count grievances\n    const aggregatedData = statusFilteredData.reduce((acc, req) => {\n        const grievance_age_category = req.age_category || 'Unknown'; // Handle missing categories\n        // Aggregate counts for each age category\n        acc[grievance_age_category] = (acc[grievance_age_category] || 0) + 1; // Fixed increment logic\n        return acc; // Return the accumulator for the next iteration\n    }, {});\n\n    // Convert aggregated data into an array of objects in order of age categories\n    const filteredDataWithNonZeroCounts = ageCategoryOrder\n        .map(category => ({\n            constituency_name: category,\n            count: aggregatedData[category] || 0,\n            color: selectedGrievanceageReport === category ? chart_color_palette.secondarylight : chart_color_palette.secondarylight // Adjusted color logic\n        }))\n        .filter(item => item.count > 0); // Only include categories with non-zero counts\n\n    // Extract categories and values for the chart\n    const categories = filteredDataWithNonZeroCounts.map(item => item.constituency_name);\n    const values = filteredDataWithNonZeroCounts.map(item => ({\n        value: item.count,\n        itemStyle: {\n            color: item.color,\n            opacity: selectedGrievanceageReport && selectedGrievanceageReport !== item.constituency_name ? 0.2 : 1\n        }\n    }));\n\n    // Return the final chart configuration\n    return {\n        title: {\n            text: appsmith.URL.queryParams.lng === 'te' ? 'ఫిర్యాదుల వయో వర్గం నివేదికు' : 'Open Grievances by Age in Days',\n            left: 'center',\n            top: 'top',\n            textStyle: {\n                fontSize: 18,\n                fontWeight: 'bold'\n            }\n        },\n        grid: {\n            left: '15%',\n            right: '10%',\n            top: '20%',\n            bottom: '20%'\n        },\n        yAxis: {\n            type: 'value'\n        },\n        xAxis: {\n            type: 'category',\n            data: categories // Only show categories with non-zero counts\n        },\n        series: [\n            {\n                type: 'bar',\n                data: values,\n                label: {\n                    show: true,\n                    position: 'top',\n                    formatter: '{c}',\n                    fontSize: 12\n                }\n            }\n        ],\n        tooltip: {\n            trigger: 'axis',\n            axisPointer: {\n                type: 'shadow'\n            }\n        }\n    };\n})()\n))(grievance_age_report_chart.chartType) }}",
+  "customFusionChartConfig": {
+    "dataSource": {
+      "chart": {
+        "alignCaptionWithCanvas": 1,
+        "canvasPadding": "0",
+        "caption": "Sales Report",
+        "captionAlignment": "center",
+        "captionFontColor": "#231F20",
+        "captionFontSize": "24",
+        "captionPadding": "20",
+        "chartBottomMargin": "10",
+        "chartLeftMargin": "20",
+        "chartRightMargin": "40",
+        "chartTopMargin": "10",
+        "labelFontColor": "#716e6e",
+        "labelFontSize": "12",
+        "legendIconAlpha": "100",
+        "legendIconBgAlpha": "100",
+        "legendIconSides": "4",
+        "legendPosition": "top",
+        "theme": "fusion",
+        "xAxisName": "Product Line",
+        "xAxisNameFontColor": "#716e6e",
+        "xAxisNameFontSize": "14",
+        "yAxisName": "Revenue($)",
+        "yAxisNameFontColor": "#716e6e",
+        "yAxisNameFontSize": "14",
+        "yAxisValueFontColor": "#716e6e",
+        "yAxisValueFontSize": "12"
+      },
+      "data": [
+        {
+          "label": "Product1",
+          "value": 20000
+        },
+        {
+          "label": "Product2",
+          "value": 22000
+        },
+        {
+          "label": "Product3",
+          "value": 32000
+        }
+      ]
+    },
+    "type": "column2d"
+  },
+  "displayName": "Chart",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "customEChartConfig"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onDataPointClick"
+    }
+  ],
+  "flexVerticalAlignment": "start",
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.8eea39845729f7f4bfadeecd3810a09d.svg",
+  "isDeprecated": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "4hhp993g5d",
+  "labelOrientation": "auto",
+  "leftColumn": 0,
+  "minWidth": 450,
+  "mobileBottomRow": 202.72343749999925,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 64,
+  "mobileTopRow": 170.72343749999942,
+  "onDataPointClick": "{{grievance_age_report.myFun1();\ntotal_open_grievances_count.myFun1();\ntotal_closed_grivevances__coun.myFun1();\ntotal_grievances_count.myFun1();\naverage_ticket_time.myFun1();}}",
+  "parentColumnSpace": 11.890625,
+  "parentId": "zjg87kjyes",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 32,
+  "searchTags": [
+    "graph",
+    "visuals",
+    "visualisations"
+  ],
+  "showDataPointLabel": false,
+  "tags": [
+    "Display"
+  ],
+  "topRow": 51.55781250000001,
+  "type": "CHART_WIDGET",
+  "version": 1,
+  "widgetId": "m0t7ffdi9u",
+  "widgetName": "grievance_age_report_chart",
+  "widthInPercentage": 0.5765041493775933,
+  "xAxisName": "Product Line",
+  "yAxisName": "Revenue($)"
+}

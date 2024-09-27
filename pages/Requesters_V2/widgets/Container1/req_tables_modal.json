@@ -1,0 +1,48 @@
+{
+  "alignment": "start",
+  "animateLoading": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 16.4,
+  "boxShadow": "none",
+  "buttonColor": "#231f20",
+  "buttonVariant": "PRIMARY",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconName": "panel-table",
+  "isDisabled": "false",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "qfrs2fljbi",
+  "leftColumn": 61.47783251231526,
+  "minWidth": 50,
+  "mobileBottomRow": 112.18124999999999,
+  "mobileLeftColumn": 2.522167487684729,
+  "mobileRightColumn": 5.044334975369458,
+  "mobileTopRow": 107.38125,
+  "needsErrorInfo": false,
+  "onClick": "{{showModal(Modal1.name).then(() => {\n  total_data_counts.myFun1();\n});}}",
+  "parentColumnSpace": 4.65625,
+  "parentId": "zjg87kjyes",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 63.999999999999986,
+  "topRow": 12.4,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "erntb6jb2v",
+  "widgetName": "req_tables_modal"
+}

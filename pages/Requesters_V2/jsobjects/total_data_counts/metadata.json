@@ -1,0 +1,20 @@
+{
+  "gitSyncId": "66daa2a0ce775502082970ac_93f5d641-c58e-449f-a21a-293fed89e99b",
+  "id": "Requesters_V2_total_data_counts",
+  "unpublishedCollection": {
+    "name": "total_data_counts",
+    "pageId": "Requesters_V2",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      }
+    ]
+  }
+}

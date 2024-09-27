@@ -1,0 +1,24 @@
+{
+  "gitSyncId": "66daa2a0ce775502082970ac_157fa71e-98f0-4f31-90b7-1ff9f749b67a",
+  "id": "Requesters_V2_requestor_utils",
+  "unpublishedCollection": {
+    "name": "requestor_utils",
+    "pageId": "Requesters_V2",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      },
+      {
+        "name": "alertShown",
+        "value": "false"
+      }
+    ]
+  }
+}

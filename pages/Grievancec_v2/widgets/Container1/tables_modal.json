@@ -1,0 +1,44 @@
+{
+  "alignment": "start",
+  "animateLoading": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 16.657812500000006,
+  "boxShadow": "none",
+  "buttonColor": "#231f20",
+  "buttonVariant": "PRIMARY",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconName": "panel-table",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "qfrs2fljbi",
+  "leftColumn": 61.47783251231526,
+  "minWidth": 50,
+  "mobileBottomRow": 104.3234375,
+  "mobileLeftColumn": 2.522167487684729,
+  "mobileRightColumn": 5.044334975369458,
+  "mobileTopRow": 99.425,
+  "needsErrorInfo": false,
+  "onClick": "{{showModal(Modal1.name).then(() => {\n  total_grievances_count.myFun1();\n});\ntotal_grievances_count.myFun1();\ntotal_open_grievances_count.myFun1();\ntotal_closed_grivevances__coun.myFun1();\naverage_ticket_time.myFun1();}}",
+  "parentColumnSpace": 4.65625,
+  "parentId": "zjg87kjyes",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 63.999999999999986,
+  "tooltip": "View and download the data for the filtred selections",
+  "topRow": 12.559375,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "fawcw1opyl",
+  "widgetName": "tables_modal"
+}

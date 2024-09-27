@@ -1,0 +1,20 @@
+{
+  "gitSyncId": "66daa2a0ce775502082970ac_97b65f02-7427-4f04-9ec9-19b5b96d5587",
+  "id": "Party_cader_v2_party_cader_reset_botton",
+  "unpublishedCollection": {
+    "name": "party_cader_reset_botton",
+    "pageId": "Party_cader_v2",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      }
+    ]
+  }
+}

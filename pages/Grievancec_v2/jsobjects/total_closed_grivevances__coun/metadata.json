@@ -1,0 +1,20 @@
+{
+  "gitSyncId": "66daa2a0ce775502082970ac_8251cd99-f8a5-4007-83de-69f6ea4f791d",
+  "id": "Grievancec_v2_total_closed_grivevances__coun",
+  "unpublishedCollection": {
+    "name": "total_closed_grivevances__coun",
+    "pageId": "Grievancec_v2",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      }
+    ]
+  }
+}

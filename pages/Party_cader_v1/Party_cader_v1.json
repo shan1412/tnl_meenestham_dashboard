@@ -1,0 +1,112 @@
+{
+  "gitSyncId": "66daa2a0ce775502082970ac_ffa40f76-0688-4cb1-a299-97c1eab8c492",
+  "unpublishedPage": {
+    "isHidden": false,
+    "layouts": [
+      {
+        "dsl": {
+          "backgroundColor": "none",
+          "bottomRow": 1665.3281250000005,
+          "canExtend": true,
+          "containerStyle": "none",
+          "detachFromLayout": true,
+          "dynamicBindingPathList": [],
+          "dynamicTriggerPathList": [],
+          "flexLayers": [
+            {
+              "children": [
+                {
+                  "align": "start",
+                  "id": "1yzqj8r4l6"
+                },
+                {
+                  "align": "start",
+                  "id": "sc6lnsff97"
+                },
+                {
+                  "align": "start",
+                  "id": "fnuglqyt2m"
+                },
+                {
+                  "align": "start",
+                  "id": "0b6q9qewfz"
+                }
+              ]
+            },
+            {
+              "children": [
+                {
+                  "align": "start",
+                  "id": "bjfqhu4i8p"
+                },
+                {
+                  "align": "start",
+                  "id": "fy44hp4f0a"
+                },
+                {
+                  "align": "start",
+                  "id": "v5pziv5p6j"
+                },
+                {
+                  "align": "start",
+                  "id": "3r4tv667x5"
+                },
+                {
+                  "align": "start",
+                  "id": "b2ugh7itke"
+                }
+              ]
+            },
+            {
+              "children": [
+                {
+                  "align": "start",
+                  "id": "imourdsu7v"
+                }
+              ]
+            },
+            {
+              "children": [
+                {
+                  "align": "start",
+                  "id": "g3bxonergk"
+                },
+                {
+                  "align": "start",
+                  "id": "8zo6ly0j0m"
+                }
+              ]
+            },
+            {
+              "children": [
+                {
+                  "align": "start",
+                  "id": "rvf9ip6zr0"
+                }
+              ]
+            }
+          ],
+          "leftColumn": 0,
+          "minHeight": 900,
+          "mobileBottomRow": 3173.34375,
+          "mobileTopRow": 0,
+          "parentColumnSpace": 1,
+          "parentRowSpace": 1,
+          "positioning": "vertical",
+          "responsiveBehavior": "fill",
+          "rightColumn": 1174,
+          "snapColumns": 64,
+          "snapRows": 125,
+          "topRow": 0,
+          "type": "CANVAS_WIDGET",
+          "useAutoLayout": true,
+          "version": 90,
+          "widgetId": "0",
+          "widgetName": "MainContainer"
+        }
+      }
+    ],
+    "name": "Party_cader_v1",
+    "slug": "party-cader-v1"
+  }
+}

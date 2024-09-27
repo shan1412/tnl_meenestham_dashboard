@@ -1,0 +1,140 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignment": "start",
+  "allowScroll": false,
+  "animateLoading": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 81.55781250000001,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "chartData": {
+    "5zz1dwyawa": {
+      "data": [
+        {
+          "x": "Product1",
+          "y": 20000
+        },
+        {
+          "x": "Product2",
+          "y": 22000
+        },
+        {
+          "x": "Product3",
+          "y": 32000
+        }
+      ],
+      "seriesName": "2023"
+    }
+  },
+  "chartName": "Sales Report",
+  "chartType": "CUSTOM_ECHART",
+  "customEChartConfig": "{{ ((chartType) => ( (() => {\n    // Retrieve selected filter values\n    const { selectedGrievanceRequestType, chart_color_palette } = utills.getFilters();\n\n    // Filter the dataset based on selected filters\n    const filteredData = utills.filterDataPoints({\n        data: grievancesdataset_dev.data,\n        filterTypes: '*',\n        excludeTypes: ['RequestType', 'TimeLine']\n    });\n\n    // Aggregate data by grievance type and count grievances\n    const aggregatedData = filteredData.reduce((acc, req) => {\n        const grievanceType = req.grievance_type || 'Unknown';\n        acc[grievanceType] = (acc[grievanceType] || 0) + 1; // Fixed increment logic\n        return acc;\n    }, {});\n\n    // Convert aggregated data into an array, filter, and sort it\n    const sortedData = Object.entries(aggregatedData)\n        .map(([grievance_type, count]) => ({\n            grievance_type,\n            count\n        }))\n        .filter(item => item.grievance_type && item.grievance_type.trim() !== '' && item.grievance_type.trim() !== 'Unknown') // Exclude null or empty grievance_type\n        .sort((a, b) => b.count - a.count); // Sort in descending order by count\n\n    // Take the top 5 grievance types\n    const top5 = sortedData.slice(0, 5);\n    const othersCount = sortedData.slice(5).reduce((acc, curr) => acc + curr.count, 0); // Count for \"Others\"\n\n    // Prepare final data including \"Others\" if there's any count\n    const finalData = [\n        ...top5,\n        ...(othersCount > 0 ? [{ grievance_type: 'Others', count: othersCount }] : [])\n    ];\n\n    // Prepare data for the chart\n    const data = finalData\n        .sort((a, b) => a.count - b.count) // Sort in ascending order based on count for correct representation in the chart\n        .sort((a, b) => a.grievance_type === \"Others\" ? -1 : 1) // Move \"Others\" to the end\n        .map(item => ({\n            grievance_type: item.grievance_type,\n            count: item.count,\n            color: selectedGrievanceRequestType === item.grievance_type ? chart_color_palette.secondarylight : chart_color_palette.secondarylight // Adjust as needed\n        }));\n\n    return {\n        title: {\n            text: appsmith.URL.queryParams.lng === 'te' ? 'ఫిర్యాదుల రకాల ఆధారంగా ఫిర్యాదుల విభజన' : 'Most Reported Grievance Types: Top 5',\n            left: 'center',\n            top: 'top',\n            textStyle: {\n                fontSize: 18,\n                fontWeight: 'bold'\n            }\n        },\n        grid: {\n            left: '20%',\n            right: '10%',\n            top: '10%',\n            bottom: '15%'\n        },\n        xAxis: {\n            type: 'value',\n            splitLine: {\n                show: true\n            }\n        },\n        yAxis: {\n            type: 'category',\n            data: data.map(item => item.grievance_type),\n            axisLabel: {\n                formatter: function (value) {\n                    const maxLength = 15; // Max characters per line\n                    const words = value.split(' '); // Split by spaces\n                    let line = '';\n                    let result = '';\n\n                    words.forEach(word => {\n                        if ((line + word).length > maxLength) {\n                            result += line.trim() + '\\n'; // Add line break\n                            line = word; // Start new line\n                        } else {\n                            line += (line.length === 0 ? '' : ' ') + word; // Add word to current line\n                        }\n                    });\n\n                    result += line.trim(); // Add the last line\n                    return result;\n                }\n            }\n        },\n        series: [\n            {\n                type: 'bar',\n                data: data.map(item => ({\n                    value: item.count,\n                    itemStyle: {\n                        color: item.color,\n                        opacity: selectedGrievanceRequestType && selectedGrievanceRequestType !== item.grievance_type ? 0.2 : 1\n                    }\n                })),\n                label: {\n                    show: true,\n                    position: 'right',\n                    formatter: '{c}',\n                    fontSize: 12\n                }\n            }\n        ],\n        tooltip: {\n            trigger: 'axis',\n            axisPointer: {\n                type: 'shadow'\n            },\n            formatter: function(params) {\n                const data = params[0];\n                return `${data.name}: ${data.value}`; // Show grievance type and count in tooltip\n            }\n        }\n    };\n})()\n))(grievance_request_type_chart.chartType) }}",
+  "customFusionChartConfig": {
+    "dataSource": {
+      "chart": {
+        "alignCaptionWithCanvas": 1,
+        "canvasPadding": "0",
+        "caption": "Sales Report",
+        "captionAlignment": "center",
+        "captionFontColor": "#231F20",
+        "captionFontSize": "24",
+        "captionPadding": "20",
+        "chartBottomMargin": "10",
+        "chartLeftMargin": "20",
+        "chartRightMargin": "40",
+        "chartTopMargin": "10",
+        "labelFontColor": "#716e6e",
+        "labelFontSize": "12",
+        "legendIconAlpha": "100",
+        "legendIconBgAlpha": "100",
+        "legendIconSides": "4",
+        "legendPosition": "top",
+        "theme": "fusion",
+        "xAxisName": "Product Line",
+        "xAxisNameFontColor": "#716e6e",
+        "xAxisNameFontSize": "14",
+        "yAxisName": "Revenue($)",
+        "yAxisNameFontColor": "#716e6e",
+        "yAxisNameFontSize": "14",
+        "yAxisValueFontColor": "#716e6e",
+        "yAxisValueFontSize": "12"
+      },
+      "data": [
+        {
+          "label": "Product1",
+          "value": 20000
+        },
+        {
+          "label": "Product2",
+          "value": 22000
+        },
+        {
+          "label": "Product3",
+          "value": 32000
+        }
+      ]
+    },
+    "type": "column2d"
+  },
+  "displayName": "Chart",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "customEChartConfig"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onDataPointClick"
+    }
+  ],
+  "flexVerticalAlignment": "start",
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.8eea39845729f7f4bfadeecd3810a09d.svg",
+  "isDeprecated": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "ed4zix1hrb",
+  "labelOrientation": "auto",
+  "leftColumn": 32,
+  "minWidth": 450,
+  "mobileBottomRow": 235.52343749999926,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 64,
+  "mobileTopRow": 203.52343749999926,
+  "onDataPointClick": "{{grievances_req_type.myFun1();\ntotal_closed_grivevances__coun.myFun1();\ntotal_open_grievances_count.myFun1();\ntotal_grievances_count.myFun1();\naverage_ticket_time.myFun1();}}",
+  "parentColumnSpace": 11.890625,
+  "parentId": "zjg87kjyes",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "searchTags": [
+    "graph",
+    "visuals",
+    "visualisations"
+  ],
+  "showDataPointLabel": false,
+  "tags": [
+    "Display"
+  ],
+  "topRow": 51.55781250000001,
+  "type": "CHART_WIDGET",
+  "version": 1,
+  "widgetId": "5ohpe9mhyc",
+  "widgetName": "grievance_request_type_chart",
+  "widthInPercentage": "0.48585418933623503",
+  "xAxisName": "Product Line",
+  "yAxisName": "Revenue($)"
+}

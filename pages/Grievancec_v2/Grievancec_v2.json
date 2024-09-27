@@ -1,0 +1,56 @@
+{
+  "gitSyncId": "66d076092736952ca76d2bd0_66d0bb072736952ca76d2c3e",
+  "unpublishedPage": {
+    "customSlug": "",
+    "isHidden": true,
+    "layouts": [
+      {
+        "dsl": {
+          "backgroundColor": "none",
+          "bottomRow": 2083.578125000002,
+          "canExtend": true,
+          "containerStyle": "none",
+          "detachFromLayout": true,
+          "dynamicBindingPathList": [],
+          "flexLayers": [
+            {
+              "children": [
+                {
+                  "align": "start",
+                  "id": "9zl64dd0sj"
+                }
+              ]
+            },
+            {
+              "children": [
+                {
+                  "align": "center",
+                  "id": "ux3vd89pka"
+                }
+              ]
+            }
+          ],
+          "leftColumn": 0,
+          "minHeight": 470,
+          "mobileBottomRow": 5033.234374999981,
+          "mobileTopRow": 0,
+          "parentColumnSpace": 1,
+          "parentRowSpace": 1,
+          "positioning": "vertical",
+          "responsiveBehavior": "fill",
+          "rightColumn": 1224,
+          "snapColumns": 64,
+          "snapRows": 45,
+          "topRow": 0,
+          "type": "CANVAS_WIDGET",
+          "useAutoLayout": true,
+          "version": 90,
+          "widgetId": "0",
+          "widgetName": "MainContainer"
+        }
+      }
+    ],
+    "name": "Grievancec_v2",
+    "slug": "grievancec-v2"
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "additionalStaticProps": [
+    "level",
+    "levelData",
+    "prefixMetaWidgetId",
+    "metaWidgetId"
+  ],
+  "alignment": "start",
+  "animateLoading": false,
+  "backgroundColor": "transparent",
+  "borderRadius": "0px",
+  "bottomRow": 135.33281250000005,
+  "boxShadow": "none",
+  "children": [
+    {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "bottomRow": 1010.0000000000005,
+      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+      "canExtend": false,
+      "containerStyle": "none",
+      "detachFromLayout": true,
+      "dropDisabled": true,
+      "dynamicBindingPathList": [
+        {
+          "key": "borderRadius"
+        },
+        {
+          "key": "boxShadow"
+        }
+      ],
+      "dynamicHeight": "AUTO_HEIGHT",
+      "flexLayers": [
+        {
+          "children": [
+            {
+              "align": "center",
+              "id": "x03sui7hnm"
+            }
+          ]
+        }
+      ],
+      "isLoading": false,
+      "isVisible": true,
+      "key": "one04duy4i",
+      "leftColumn": 0,
+      "maxDynamicHeight": 9000,
+      "minDynamicHeight": 4,
+      "minHeight": 400,
+      "minWidth": 450,
+      "mobileBottomRow": 400,
+      "mobileLeftColumn": 0,
+      "mobileRightColumn": 64,
+      "mobileTopRow": 0,
+      "needsErrorInfo": false,
+      "noPad": true,
+      "openParentPropertyPane": true,
+      "parentColumnSpace": 1,
+      "parentId": "8zo6ly0j0m",
+      "parentRowSpace": 1,
+      "positioning": "vertical",
+      "renderMode": "CANVAS",
+      "responsiveBehavior": "fill",
+      "rightColumn": 64,
+      "topRow": 0,
+      "type": "CANVAS_WIDGET",
+      "version": 1,
+      "widgetId": "9dpea27dpn",
+      "widgetName": "Canvas5"
+    }
+  ],
+  "currentItemsView": "{{[]}}",
+  "defaultSelectedItem": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "currentItemsView"
+    },
+    {
+      "key": "selectedItemView"
+    },
+    {
+      "key": "triggeredItemView"
+    },
+    {
+      "key": "primaryKeys"
+    },
+    {
+      "key": "accentColor"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "enhancements": true,
+  "flexVerticalAlignment": "start",
+  "gridType": "vertical",
+  "hasMetaWidgets": true,
+  "isCanvas": true,
+  "isLoading": false,
+  "isVisible": true,
+  "itemBackgroundColor": "#FFFFFF",
+  "itemSpacing": "16",
+  "key": "4a0fevzv7m",
+  "leftColumn": 32,
+  "listData": "[\n  {\n    \"id\": \"001\",\n    \"name\": \"Mandal: Vidapanakal \\nVillage: DONEKAL \\nBooth: 1 \\nName: SOMASEKHAR B \\nVoter Engagement Rate: 85% \\nCader to Voters Ratio: 1:25\"\n  },\n  {\n    \"id\": \"002\",\n    \"name\": \"Mandal: Vidapanakal \\nVillage: DONEKAL \\nBooth: 2 \\nName: KAMMARA MAHESWARI \\nVoter Engagement Rate: 78% \\nCader to Voters Ratio: 1:30\"\n  },\n  {\n    \"id\": \"003\",\n    \"name\": \"Mandal: Vidapanakal \\nVillage: DONEKAL \\nBooth: 3 \\nName: SAKUNTALAMMA \\nVoter Engagement Rate: 82% \\nCader to Voters Ratio: 1:28\"\n  },\n  {\n    \"id\": \"004\",\n    \"name\": \"Mandal: Vidapanakal \\nVillage: KADADARABENCHI \\nBooth: 4 \\nName: G SHWETHA \\nVoter Engagement Rate: 90% \\nCader to Voters Ratio: 1:22\"\n  },\n  {\n    \"id\": \"005\",\n    \"name\": \"Mandal: Vidapanakal \\nVillage: GODEKAL \\nBooth: 5 \\nName: K RAVI \\nVoter Engagement Rate: 76% \\nCader to Voters Ratio: 1:35\"\n  },\n  {\n    \"id\": \"006\",\n    \"name\": \"Mandal: Vidapanakal \\nVillage: GODEKAL \\nBooth: 6 \\nName: PARVATHI SUGALI \\nVoter Engagement Rate: 80% \\nCader to Voters Ratio: 1:27\"\n  },\n  {\n    \"id\": \"007\",\n    \"name\": \"Mandal: Vidapanakal \\nVillage: GODEKAL \\nBooth: 7 \\nName: VADDE USHA \\nVoter Engagement Rate: 88% \\nCader to Voters Ratio: 1:24\"\n  },\n  {\n    \"id\": \"008\",\n    \"name\": \"Mandal: Vidapanakal \\nVillage: GODEKAL \\nBooth: 8 \\nName: RAMANJINEYULU \\nVoter Engagement Rate: 74% \\nCader to Voters Ratio: 1:32\"\n  },\n  {\n    \"id\": \"009\",\n    \"name\": \"Mandal: Vidapanakal \\nVillage: HANCHANAHAL \\nBooth: 9 \\nName: SUVARNA BOYA \\nVoter Engagement Rate: 81% \\nCader to Voters Ratio: 1:29\"\n  },\n  {\n    \"id\": \"010\",\n    \"name\": \"Mandal: Vidapanakal \\nVillage: POLIKI \\nBooth: 10 \\nName: MONDI MARENNA \\nVoter Engagement Rate: 77% \\nCader to Voters Ratio: 1:33\"\n  }\n]\n",
+  "mainCanvasId": "9dpea27dpn",
+  "mainContainerId": "x03sui7hnm",
+  "minWidth": 450,
+  "mobileBottomRow": 276.534375,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 64,
+  "mobileTopRow": 236.53437500000007,
+  "needsErrorInfo": false,
+  "pageSize": 3,
+  "parentColumnSpace": 8.390625,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "primaryKeys": "{{List1.listData.map((currentItem, currentIndex) => currentItem[\"id\"] )}}",
+  "renderMode": "CANVAS",
+  "requiresFlatWidgetChildren": true,
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "selectedItemView": "{{{}}}",
+  "serverSidePagination": false,
+  "templateHeight": 160,
+  "topRow": 34.3328125,
+  "totalRecordsCount": "3",
+  "triggeredItemView": "{{{}}}",
+  "type": "LIST_WIDGET_V2",
+  "widgetId": "8zo6ly0j0m",
+  "widgetName": "List1",
+  "widthInPercentage": 0.4936608557844691
+}

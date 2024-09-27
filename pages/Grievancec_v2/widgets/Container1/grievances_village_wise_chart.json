@@ -1,0 +1,140 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignment": "start",
+  "allowScroll": false,
+  "animateLoading": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 206.35781250000016,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "chartData": {
+    "5zz1dwyawa": {
+      "data": [
+        {
+          "x": "Product1",
+          "y": 20000
+        },
+        {
+          "x": "Product2",
+          "y": 22000
+        },
+        {
+          "x": "Product3",
+          "y": 32000
+        }
+      ],
+      "seriesName": "2023"
+    }
+  },
+  "chartName": "Sales Report",
+  "chartType": "CUSTOM_ECHART",
+  "customEChartConfig": "{{ ((chartType) => ( (() => {\n    // Retrieve selected filter values\n    const { selectGrievanceByVillage, chart_color_palette } = utills.getFilters();\n\n    // Filter the dataset based on selected filters\n    const filteredData = utills.filterDataPoints({\n        data: grievancesdataset_dev.data,\n        filterTypes: '*',\n        excludeTypes: ['ByVillage', 'TimeLine']\n    });\n\n    // Aggregate data by village and count grievances\n    const aggregatedData = filteredData.filter(item => item.location_granularity === 'Village')\n        .reduce((acc, req) => {\n            const villageName = req.request_village || 'Unknown'; // Handle undefined village names\n            acc[villageName] = (acc[villageName] || 0) + 1; // Increment count for each village\n            return acc; // Return the accumulator\n        }, {});\n\n    // Convert the aggregated data into an array and sort by grievance count\n    const sortedData = Object.entries(aggregatedData)\n        .map(([villageName, count]) => ({ villageName, count }))\n        .sort((a, b) => b.count - a.count); // Sort in descending order by count\n\n    // Take the top 5 villages\n    const top5 = sortedData.filter(item => item.villageName && item.villageName.trim() !== '' && item.villageName.trim() !== 'NA'&& item.villageName.trim() !== 'Unknown').slice(0, 5); // Get the top 5 villages\n\n    // Count for \"Others\"\n    const othersCount = sortedData.slice(5).reduce((acc, curr) => acc + curr.count, 0); // Aggregate the rest\n\n    // Prepare final data for the chart with \"Others\" at the end\n    const finalData = [\n        ...top5,\n        ...(othersCount > 0 ? [{ villageName: 'Others', count: othersCount }] : [])\n    ];\n\n    // Prepare data for the chart\n    const data = finalData\n        // Sort in descending order based on count\n        .sort((a, b) => a.count - b.count)\n        .map((item) => ({\n            villageName: item.villageName,\n            count: item.count,\n            color: item.color || chart_color_palette.secondarylight,\n        }))\n        .sort((a, b) => a.villageName === \"Others\" ? -1 : 1); // Move \"Others\" to the end\n\n    return {\n        title: {\n            text: appsmith.URL.queryParams.lng === 'te' ? 'ఫిర్యాదుల ఆధారంగా అగ్రస్థానంలో ఉన్న 5 గ్రామాలు' : 'Top 5 Grievance-Prone Villages',\n            left: 'center', // Position the title in the center\n            top: 'top', // Position the title at the top\n            textStyle: {\n                fontSize: 18, // Set title font size\n                fontWeight: 'bold' // Set title font weight\n            }\n        },\n        grid: {\n            left: '20%', // Increase left margin to fit labels\n            right: '10%',\n            top: '10%',\n            bottom: '15%'\n        },\n        xAxis: {\n            type: 'value' // X-axis represents values for a horizontal bar chart\n        },\n        yAxis: {\n            type: 'category', // Y-axis represents categories (villages)\n            data: data.map(item => item.villageName), // Set categories (villages)\n            axisLabel: {\n                formatter: function (value) {\n                    const maxLength = 10; // Max characters per line\n                    const words = value.split(' '); // Split by spaces\n                    let line = '';\n                    let result = '';\n\n                    words.forEach(word => {\n                        if ((line + word).length > maxLength) {\n                            result += `${line.trim()}\\n`; // Add line break\n                            line = word; // Start new line\n                        } else {\n                            line += (line.length === 0 ? '' : ' ') + word; // Add word to current line\n                        }\n                    });\n\n                    result += line.trim(); // Add the last line\n                    return result;\n                }\n            }\n        },\n        series: [\n            {\n                type: 'bar', // Bar chart type\n                data: data.map(item => ({\n                    value: item.count, // X-axis value for horizontal bar chart\n                    itemStyle: {\n                        color: item.color,\n                        opacity: selectGrievanceByVillage && selectGrievanceByVillage !== item.villageName ? 0.2 : 1 // Adjust opacity based on selection\n                    }\n                })),\n                label: {\n                    show: true,\n                    position: 'right',\n                    formatter: '{c}', // Display the value\n                    fontSize: 12 // Set label font size\n                },\n            }\n        ],\n        tooltip: {\n            trigger: 'axis',\n            axisPointer: {\n                type: 'shadow'\n            }\n        }\n    };\n})()\n))(grievances_village_wise_chart.chartType) }}",
+  "customFusionChartConfig": {
+    "dataSource": {
+      "chart": {
+        "alignCaptionWithCanvas": 1,
+        "canvasPadding": "0",
+        "caption": "Sales Report",
+        "captionAlignment": "center",
+        "captionFontColor": "#231F20",
+        "captionFontSize": "24",
+        "captionPadding": "20",
+        "chartBottomMargin": "10",
+        "chartLeftMargin": "20",
+        "chartRightMargin": "40",
+        "chartTopMargin": "10",
+        "labelFontColor": "#716e6e",
+        "labelFontSize": "12",
+        "legendIconAlpha": "100",
+        "legendIconBgAlpha": "100",
+        "legendIconSides": "4",
+        "legendPosition": "top",
+        "theme": "fusion",
+        "xAxisName": "Product Line",
+        "xAxisNameFontColor": "#716e6e",
+        "xAxisNameFontSize": "14",
+        "yAxisName": "Revenue($)",
+        "yAxisNameFontColor": "#716e6e",
+        "yAxisNameFontSize": "14",
+        "yAxisValueFontColor": "#716e6e",
+        "yAxisValueFontSize": "12"
+      },
+      "data": [
+        {
+          "label": "Product1",
+          "value": 20000
+        },
+        {
+          "label": "Product2",
+          "value": 22000
+        },
+        {
+          "label": "Product3",
+          "value": 32000
+        }
+      ]
+    },
+    "type": "column2d"
+  },
+  "displayName": "Chart",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "customEChartConfig"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onDataPointClick"
+    }
+  ],
+  "flexVerticalAlignment": "start",
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.8eea39845729f7f4bfadeecd3810a09d.svg",
+  "isDeprecated": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "ed4zix1hrb",
+  "labelOrientation": "auto",
+  "leftColumn": 0,
+  "minWidth": 450,
+  "mobileBottomRow": 432.3234374999981,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 64,
+  "mobileTopRow": 400.3234374999975,
+  "onDataPointClick": "{{grievence_by_village_store.myFun1();\ntotal_closed_grivevances__coun.myFun1();\ntotal_open_grievances_count.myFun1();\naverage_ticket_time.myFun1();\ntotal_grievances_count.myFun1();}}",
+  "parentColumnSpace": 11.890625,
+  "parentId": "zjg87kjyes",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "searchTags": [
+    "graph",
+    "visuals",
+    "visualisations"
+  ],
+  "showDataPointLabel": false,
+  "tags": [
+    "Display"
+  ],
+  "topRow": 176.35781250000016,
+  "type": "CHART_WIDGET",
+  "version": 1,
+  "widgetId": "pkexjlkzv5",
+  "widgetName": "grievances_village_wise_chart",
+  "widthInPercentage": 0.9717083786724701,
+  "xAxisName": "Product Line",
+  "yAxisName": "Revenue($)"
+}

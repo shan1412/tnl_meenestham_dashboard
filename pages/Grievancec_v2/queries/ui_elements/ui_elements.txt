@@ -1,0 +1,1 @@
+select * from connecthub."ClientInfo" ci where "ClientKey" = {{appsmith.URL.queryParams.client_key}}

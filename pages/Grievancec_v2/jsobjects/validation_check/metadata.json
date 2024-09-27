@@ -1,0 +1,20 @@
+{
+  "gitSyncId": "66daa2a0ce775502082970ac_3ee316ac-b51e-42d0-9466-e5e12af1037c",
+  "id": "Grievancec_v2_validation_check",
+  "unpublishedCollection": {
+    "name": "validation_check",
+    "pageId": "Grievancec_v2",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      }
+    ]
+  }
+}

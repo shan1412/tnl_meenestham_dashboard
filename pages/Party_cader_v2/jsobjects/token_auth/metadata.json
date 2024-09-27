@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "66daa2a0ce775502082970ac_7a4f1097-f002-4993-8995-a1509e24797d",
+  "id": "Party_cader_v2_token_auth",
+  "unpublishedCollection": {
+    "name": "token_auth",
+    "pageId": "Party_cader_v2",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

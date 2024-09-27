@@ -1,0 +1,131 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignment": "start",
+  "allowScroll": false,
+  "animateLoading": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 52.1984375,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "chartData": {
+    "dg5bgk18ji": {
+      "color": "",
+      "data": "{{\n  Object.entries( requestordataset.data.reduce((acc, gender) => {\n      acc[gender.gender] = (acc[gender.gender] || 0) + 1;  return acc;\n    }, {})\n  ).map(([gender, count]) => ({ x: gender, y: count, color: appsmith.store.gender_datapoint == gender ? '#ec4899' : '#3b82f6' })) \n}}",
+      "seriesName": "gender"
+    }
+  },
+  "chartName": "Gender",
+  "chartType": "CUSTOM_ECHART",
+  "customEChartConfig": "{{ ((chartType) => ( (() => {\n    // Retrieve selected filter values\n    const { selectedGender } = requestor_utils.getFilters();\n\n    // Filter the dataset based on selected filters\n    const filteredData = requestor_utils.filterDataPoints({\n        data: requestordataset_dev.data,\n        filterTypes: '*',\n        excludeTypes: ['ByGender']\n    });\n\n    // Aggregate data\n    const aggregatedData = filteredData.reduce((acc, item) => {\n        acc[item.gender] = (acc[item.gender] || 0) + 1; // Correctly increment the count by gender\n        return acc;\n    }, {});\n\n    // Sort and prepare data for the chart\n    const sortedData = Object.entries(aggregatedData)\n        .sort((a, b) => b[1] - a[1]) // Sort by count in descending order\n        .map(([gender, count]) => ({\n            name: gender,\n            value: count,\n            itemStyle: {\n                opacity: selectedGender && selectedGender !== gender ? 0.2 : 1\n            }\n        }));\n\n    return {\n        title: {\n            text: 'Requestors by Gender',\n            left: 'center',\n            top: 'top',\n            textStyle: {\n                fontSize: 18,\n                fontWeight: 'bold',\n            },\n        },\n        series: [\n            {\n                type: 'pie',\n                radius: ['30%', '60%'],\n                data: sortedData,\n                label: {\n                    show: true,\n                    formatter: '{b}:{d}%',\n                },\n                emphasis: {\n                    itemStyle: {\n                        shadowBlur: 10,\n                        shadowOffsetX: 0,\n                        shadowColor: 'rgba(0, 0, 0, 0.5)'\n                    }\n                }\n            }\n        ],\n        tooltip: {\n            trigger: 'item',\n            formatter: '{b}: {c} ({d}%)'\n        }\n    };\n})()\n))(gender_chart.chartType) }}",
+  "customFusionChartConfig": {
+    "dataSource": {
+      "chart": {
+        "alignCaptionWithCanvas": 1,
+        "canvasPadding": "0",
+        "caption": "Sales Report",
+        "captionAlignment": "center",
+        "captionFontColor": "#231F20",
+        "captionFontSize": "24",
+        "captionPadding": "20",
+        "chartBottomMargin": "10",
+        "chartLeftMargin": "20",
+        "chartRightMargin": "40",
+        "chartTopMargin": "10",
+        "labelFontColor": "#716e6e",
+        "labelFontSize": "12",
+        "legendIconAlpha": "100",
+        "legendIconBgAlpha": "100",
+        "legendIconSides": "4",
+        "legendPosition": "top",
+        "theme": "fusion",
+        "xAxisName": "Product Line",
+        "xAxisNameFontColor": "#716e6e",
+        "xAxisNameFontSize": "14",
+        "yAxisName": "Revenue($)",
+        "yAxisNameFontColor": "#716e6e",
+        "yAxisNameFontSize": "14",
+        "yAxisValueFontColor": "#716e6e",
+        "yAxisValueFontSize": "12"
+      },
+      "data": [
+        {
+          "label": "Product1",
+          "value": 20000
+        },
+        {
+          "label": "Product2",
+          "value": 22000
+        },
+        {
+          "label": "Product3",
+          "value": 32000
+        }
+      ]
+    },
+    "type": "column2d"
+  },
+  "displayName": "Chart",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "chartData.dg5bgk18ji.data"
+    },
+    {
+      "key": "customEChartConfig"
+    }
+  ],
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onDataPointClick"
+    }
+  ],
+  "flexVerticalAlignment": "start",
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.8eea39845729f7f4bfadeecd3810a09d.svg",
+  "isDeprecated": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "9anuy4o1op",
+  "labelOrientation": "auto",
+  "leftColumn": 0,
+  "minWidth": 450,
+  "mobileBottomRow": 144.9812500000001,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 64,
+  "mobileTopRow": 112.98124999999999,
+  "onDataPointClick": "{{gender_store.myFun1();\ntotal_data_counts.myFun1();}}",
+  "parentColumnSpace": 12.0625,
+  "parentId": "zjg87kjyes",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 32,
+  "searchTags": [
+    "graph",
+    "visuals",
+    "visualisations"
+  ],
+  "showDataPointLabel": false,
+  "tags": [
+    "Display"
+  ],
+  "topRow": 20.1984375,
+  "type": "CHART_WIDGET",
+  "version": 1,
+  "widgetId": "mvnww5srk3",
+  "widgetName": "gender_chart",
+  "xAxisName": "",
+  "yAxisName": ""
+}

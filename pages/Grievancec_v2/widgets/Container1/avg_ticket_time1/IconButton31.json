@@ -1,0 +1,56 @@
+{
+  "alignment": "start",
+  "animateLoading": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 9.2984375,
+  "boxShadow": "none",
+  "buttonColor": "{{utills.myFun1.data.secondarylight}}",
+  "buttonStyle": "PRIMARY",
+  "buttonVariant": "PRIMARY",
+  "displayName": "Icon button",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "buttonColor"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "buttonColor"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "hideCard": false,
+  "iconName": "timeline-events",
+  "iconSVG": "/static/media/icon.b08054586989b185a0801e9a34f8ad49.svg",
+  "isDeprecated": false,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "s6ucv3zqfe",
+  "leftColumn": 54.51851851851852,
+  "minWidth": 50,
+  "mobileBottomRow": 14.657812499999999,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 2.5472636815920398,
+  "mobileTopRow": 9.759374999999999,
+  "parentId": "ac7vbcatxv",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 64,
+  "searchTags": [
+    "click",
+    "submit"
+  ],
+  "tags": [
+    "Buttons"
+  ],
+  "tooltip": "Average Time per Ticket: The average amount of time taken to complete or close a ticket from the moment it was created.",
+  "topRow": 5.2,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "apdv0vtmsc",
+  "widgetName": "IconButton31"
+}

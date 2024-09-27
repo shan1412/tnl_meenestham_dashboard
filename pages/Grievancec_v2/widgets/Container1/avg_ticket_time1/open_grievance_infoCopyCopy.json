@@ -1,0 +1,54 @@
+{
+  "alignment": "start",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 9.359375,
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "0.875rem",
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "zn8e9t533t",
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 8.959375,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 64,
+  "mobileTopRow": 4.8,
+  "needsErrorInfo": false,
+  "overflow": "NONE",
+  "parentColumnSpace": 5.15625,
+  "parentId": "ac7vbcatxv",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 54.51851851851852,
+  "shouldTruncate": false,
+  "text": "Meenestham: {{ average_ticket_time.myFun1.data.sourceAggregation?.Meenestham?.avgAge || ' ' }}\nPGRS: {{ average_ticket_time.myFun1.data.sourceAggregation?.PGRS?.avgAge || ' ' }}\n",
+  "textAlign": "LEFT",
+  "textColor": "#999999",
+  "topRow": 5.2,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "3smmqcqy86",
+  "widgetName": "open_grievance_infoCopyCopy"
+}

@@ -1,0 +1,20 @@
+{
+  "gitSyncId": "66daa2a0ce775502082970ac_759a6049-228a-4b3a-98c3-b1aed0c1d412",
+  "id": "Party_cader_v2_cader_cards_stats",
+  "unpublishedCollection": {
+    "name": "cader_cards_stats",
+    "pageId": "Party_cader_v2",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      }
+    ]
+  }
+}

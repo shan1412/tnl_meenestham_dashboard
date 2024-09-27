@@ -1,0 +1,52 @@
+{
+  "alignment": "end",
+  "animateLoading": false,
+  "borderRadius": "0.375rem",
+  "bottomRow": 9.2,
+  "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+  "buttonColor": "{{load_login_ui_elements_db.data.Data.Palette.secondarylight}}",
+  "buttonStyle": "PRIMARY",
+  "buttonVariant": "PRIMARY",
+  "displayName": "Icon button",
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "buttonColor"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "hideCard": false,
+  "iconName": "office",
+  "iconSVG": "/static/media/icon.b08054586989b185a0801e9a34f8ad49.svg",
+  "isDeprecated": false,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "qs4s6dduzx",
+  "leftColumn": 56.203045685279186,
+  "minWidth": 50,
+  "mobileBottomRow": 17.918749999999996,
+  "mobileLeftColumn": 61.45273631840796,
+  "mobileRightColumn": 64,
+  "mobileTopRow": 13.118749999999999,
+  "parentId": "4ujdfekdur",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 64,
+  "searchTags": [
+    "click",
+    "submit"
+  ],
+  "tags": [
+    "Buttons"
+  ],
+  "topRow": 5.2,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "qu7sdz01ow",
+  "widgetName": "total_association_icon"
+}

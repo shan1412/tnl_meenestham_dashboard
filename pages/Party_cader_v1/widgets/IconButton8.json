@@ -1,0 +1,38 @@
+{
+  "alignment": "start",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 18,
+  "boxShadow": "none",
+  "buttonColor": "#231f20",
+  "buttonVariant": "PRIMARY",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "iconName": "panel-table",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "9dincjazz9",
+  "leftColumn": 59.81699346405229,
+  "minWidth": 50,
+  "mobileBottomRow": 91.80000000000005,
+  "mobileLeftColumn": 6.597938144329897,
+  "mobileRightColumn": 13.195876288659793,
+  "mobileTopRow": 87.80000000000004,
+  "needsErrorInfo": false,
+  "parentColumnSpace": 9.84375,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 64,
+  "topRow": 14,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "b2ugh7itke",
+  "widgetName": "IconButton8"
+}

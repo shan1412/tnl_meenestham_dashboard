@@ -1,0 +1,114 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignment": "start",
+  "allowScroll": false,
+  "animateLoading": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 30,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "chartData": {
+    "nqbzeafdfj": {
+      "data": "{{option = {\n  tooltip: {\n    formatter: '{a} <br/>{b} : {c}%'\n  },\n  series: [\n    {\n      name: 'Pressure',\n      type: 'gauge',\n      progress: {\n        show: true\n      },\n      detail: {\n        valueAnimation: true,\n        formatter: '{value}%'\n      },\n      data: [\n        {\n          value: 50 ,\n          name: 'Contact Book Quality'\n        }\n      ]\n    }\n  ]\n}}}",
+      "seriesName": "2023"
+    }
+  },
+  "chartName": "Sales Report",
+  "chartType": "CUSTOM_ECHART",
+  "customEChartConfig": "{{ ((chartType) => ( {\n  tooltip: {\n    formatter: '{a} <br/>{b} : {c}%'\n  },\n  series: [\n    {\n      name: 'Pressure',\n      type: 'gauge',\n      progress: {\n        show: true,\n        color: '#FFD18E'  // Set the progress color to a yellow shade\n      },\n      axisLine: {\n        lineStyle: {\n          color: [\n            [0.5, '#eec861'],  // Completed segment color: yellow\n            [1, '#FBF6E2']     // Rest of the gauge: off white\n          ],\n          width: 10  // Adjust the width of the axis line\n        }\n      },\n      detail: {\n        valueAnimation: true,\n        formatter: '{value}%',\n        color: '#eec861'  // Set the value color to yellow\n      },\n      title: {\n        offsetCenter: [0, '100%'],  // Move the title to the bottom\n        fontSize: 16,  // Adjust font size as needed\n        color: '#333'  // Set title color\n      },\n      data: [\n        {\n          value: 50,\n          name: 'Voters Contact completeness score'  // Title for the gauge chart\n        }\n      ]\n    }\n  ]\n}\n))(Chart2.chartType) }}",
+  "customFusionChartConfig": {
+    "dataSource": {
+      "chart": {
+        "alignCaptionWithCanvas": 1,
+        "canvasPadding": "0",
+        "caption": "Sales Report",
+        "captionAlignment": "center",
+        "captionFontColor": "#231F20",
+        "captionFontSize": "24",
+        "captionPadding": "20",
+        "chartBottomMargin": "10",
+        "chartLeftMargin": "20",
+        "chartRightMargin": "40",
+        "chartTopMargin": "10",
+        "labelFontColor": "#716e6e",
+        "labelFontSize": "12",
+        "legendIconAlpha": "100",
+        "legendIconBgAlpha": "100",
+        "legendIconSides": "4",
+        "legendPosition": "top",
+        "theme": "fusion",
+        "xAxisName": "Product Line",
+        "xAxisNameFontColor": "#716e6e",
+        "xAxisNameFontSize": "14",
+        "yAxisName": "Revenue($)",
+        "yAxisNameFontColor": "#716e6e",
+        "yAxisNameFontSize": "14",
+        "yAxisValueFontColor": "#716e6e",
+        "yAxisValueFontSize": "12"
+      },
+      "data": [
+        {
+          "label": "Product1",
+          "value": 20000
+        },
+        {
+          "label": "Product2",
+          "value": 22000
+        },
+        {
+          "label": "Product3",
+          "value": 32000
+        }
+      ]
+    },
+    "type": "column2d"
+  },
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "chartData.nqbzeafdfj.data"
+    },
+    {
+      "key": "customEChartConfig"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "flexVerticalAlignment": "start",
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "xkcksv86i8",
+  "labelOrientation": "auto",
+  "leftColumn": 0,
+  "minWidth": 450,
+  "mobileBottomRow": 32.000000000000014,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 64,
+  "mobileTopRow": 0,
+  "needsErrorInfo": true,
+  "parentColumnSpace": 18.875,
+  "parentId": "3ac88y3fed",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "showDataPointLabel": false,
+  "topRow": 0,
+  "type": "CHART_WIDGET",
+  "version": 1,
+  "widgetId": "ko5u5ax98e",
+  "widgetName": "Chart2",
+  "widthInPercentage": 0.4688385269121813,
+  "xAxisName": "Product Line",
+  "yAxisName": "Revenue($)"
+}

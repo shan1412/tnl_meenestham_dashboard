@@ -1,0 +1,271 @@
+select
+	"ID",
+	client_key,
+	lang,
+	photo,
+	requestor_type,
+	requestor_type_name,
+	"name",
+	registration_number,
+	"Age",
+	age_group,
+	gender,
+	requestor_contact,
+	requestor_alternate_contact,
+	mobile,
+	email,
+	occupation_id,
+	occupation,
+	constituency_type,
+	constituency_key,
+	constituency_name,
+	state_key,
+	state,
+	district_key,
+	district,
+	mandal_key,
+	mandal,
+	village_key,
+	village,
+	door_flat_no,
+	pin_code,
+	address_line1,
+	address_line2,
+	voter_id,
+	relation_type,
+	relation_name,
+	relation_contact,
+	relation_alternate_contact,
+	tags::text[],
+	requestor_grievance_info::json,
+	UNNEST(requestor_grievances) requestor_grievances,
+	1 no_of_grievances,
+	UNNEST(requestor_grievances_name) requestor_grievances_name,
+	UNNEST(requestor_grievances_name_key) requestor_grievances_name_key,
+	requestor_reference_type,
+	requestor_reference_relation,
+	additional_info,
+	members::json,
+	is_active,
+	created_by,
+	created_user_name,
+	created_on,
+	created_on_month,
+	created_on_year,
+	created_on_month_year,
+	"LocationGranularity",
+	TO_CHAR(created_on,
+	'YYYY-MM-DD') as formatted_created_on
+from
+	(
+	select
+		a."ID",
+		client_key,
+		lang,
+		photo,
+		requestor_type,
+		requestor_type_name,
+		"name",
+		registration_number,
+		"Age",
+		age_group,
+		gender,
+		requestor_contact,
+		requestor_alternate_contact,
+		mobile,
+		email,
+		occupation_id,
+		occupation,
+		constituency_type,
+		constituency_key,
+		constituency_name,
+		state_key,
+		state,
+		district_key,
+		district,
+		mandal_key,
+		mandal,
+		village_key,
+		village,
+		door_flat_no,
+		pin_code,
+		address_line1,
+		address_line2,
+		voter_id,
+		relation_type,
+		relation_name,
+		relation_contact,
+		relation_alternate_contact,
+		tags::text,
+		requestor_grievance_info::text,
+		requestor_grievances,
+		array_textdistinct(string_to_array(string_agg(gi."GrievanceTypeName"::text,
+		','::text),
+		','::text)) as requestor_grievances_name,
+		array_textdistinct(string_to_array(string_agg(gi."GrievanceType"::text,
+		','::text),
+		','::text)) as requestor_grievances_name_key,
+		requestor_reference_type,
+		requestor_reference_relation,
+		additional_info,
+		members::text,
+		is_active,
+		created_by,
+		created_user_name,
+		created_on,
+		created_on_month,
+		created_on_year,
+		created_on_month_year ,
+		case
+			when constituency_key = 0
+			and state_key = 0
+			and district_key = 0
+			and mandal_key = 0
+			and village_key = 0 then 'Not-Relevant (Any Location)'
+			when constituency_key != 0
+			and state_key = 0
+			and district_key = 0
+			and mandal_key = 0
+			and village_key = 0 then 'AC'
+			when constituency_key != 0
+			and state_key != 0
+			and district_key = 0
+			and mandal_key = 0
+			and village_key = 0 then 'State'
+			when constituency_key != 0
+			and state_key != 0
+			and district_key != 0
+			and mandal_key = 0
+			and village_key = 0 then 'Distrit'
+			when constituency_key != 0
+			and state_key != 0
+			and district_key != 0
+			and mandal_key != 0
+			and village_key = 0 then 'Mandal'
+			when constituency_key != 0
+			and state_key != 0
+			and district_key != 0
+			and mandal_key != 0
+			and village_key != 0 then 'Village'
+			when constituency_key != 0
+			and state_key = 0
+			and district_key = 0
+			and mandal_key = 0
+			and village_key = 0 then 'Not-Relevant (Any Location)'
+			when constituency_key = 0
+			and state_key = 0
+			and district_key = 0
+			and mandal_key = 0
+			and village_key = 0 then 'AC'
+			when constituency_key = 0
+			and state_key != 0
+			and district_key = 0
+			and mandal_key = 0
+			and village_key = 0 then 'State'
+			when constituency_key = 0
+			and state_key != 0
+			and district_key != 0
+			and mandal_key = 0
+			and village_key = 0 then 'Distrit'
+			when constituency_key = 0
+			and state_key != 0
+			and district_key != 0
+			and mandal_key != 0
+			and village_key = 0 then 'Mandal'
+			when constituency_key = 0
+			and state_key != 0
+			and district_key != 0
+			and mandal_key != 0
+			and village_key != 0 then 'Village'
+			when constituency_key is null
+			and state_key = 0
+			and district_key = 0
+			and mandal_key = 0
+			and village_key = 0 then 'Not-Relevant (Any Location)'
+			when constituency_key is null
+			and state_key = 0
+			and district_key = 0
+			and mandal_key = 0
+			and village_key = 0 then 'AC'
+			when constituency_key is null
+			and state_key != 0
+			and district_key = 0
+			and mandal_key = 0
+			and village_key = 0 then 'State'
+			when constituency_key is null
+			and state_key != 0
+			and district_key != 0
+			and mandal_key = 0
+			and village_key = 0 then 'Distrit'
+			when constituency_key is null
+			and state_key != 0
+			and district_key != 0
+			and mandal_key != 0
+			and village_key = 0 then 'Mandal'
+			when constituency_key is null
+			and state_key != 0
+			and district_key != 0
+			and mandal_key != 0
+			and village_key != 0 then 'Village'
+		end "LocationGranularity"
+	from
+		hubviews.vw_requestordataset a
+	join connecthub."GrievanceInfo" gi on
+		gi."GrievanceKey" = any(a.requestor_grievances)
+	where
+		'Party Cadre' = any(Tags)
+		and ARRAY_length(requestor_grievances,
+		1) <> 0
+	group by
+		a."ID",
+		client_key,
+		lang,
+		photo,
+		requestor_type,
+		requestor_type_name,
+		"name",
+		registration_number,
+		"Age",
+		age_group,
+		gender,
+		requestor_contact,
+		requestor_alternate_contact,
+		mobile,
+		email,
+		occupation_id,
+		occupation,
+		constituency_type,
+		constituency_key,
+		constituency_name,
+		state_key,
+		state,
+		district_key,
+		district,
+		mandal_key,
+		mandal,
+		village_key,
+		village,
+		door_flat_no,
+		pin_code,
+		address_line1,
+		address_line2,
+		voter_id,
+		relation_type,
+		relation_name,
+		relation_contact,
+		relation_alternate_contact,
+		tags::text,
+		requestor_grievance_info::text,
+		requestor_grievances,
+		requestor_reference_type,
+		requestor_reference_relation,
+		additional_info,
+		members::text,
+		is_active,
+		created_by,
+		created_user_name,
+		created_on,
+		created_on_month,
+		created_on_year,
+		created_on_month_year
+) a;

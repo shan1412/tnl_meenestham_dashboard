@@ -1,0 +1,20 @@
+{
+  "gitSyncId": "66d54fc7ce77550208296c31_b223d86f-ce3a-4d43-87c9-5ab7417452a6",
+  "id": "Requesters_V2_requesters_reset_button",
+  "unpublishedCollection": {
+    "name": "requesters_reset_button",
+    "pageId": "Requesters_V2",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      }
+    ]
+  }
+}

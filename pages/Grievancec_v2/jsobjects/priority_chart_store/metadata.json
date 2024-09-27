@@ -1,0 +1,24 @@
+{
+  "gitSyncId": "66d076092736952ca76d2bd0_66d22e512736952ca76d2d2a",
+  "id": "Grievancec_v2_priority_chart_store",
+  "unpublishedCollection": {
+    "name": "priority_chart_store",
+    "pageId": "Grievancec_v2",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      },
+      {
+        "name": "gender_hl",
+        "value": "''"
+      }
+    ]
+  }
+}

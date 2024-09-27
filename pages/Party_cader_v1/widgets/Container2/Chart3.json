@@ -1,0 +1,123 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignment": "start",
+  "allowScroll": false,
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 63.2,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "chartData": {
+    "ocpf7x7dfx": {
+      "data": [
+        {
+          "x": "Product1",
+          "y": 20000
+        },
+        {
+          "x": "Product2",
+          "y": 22000
+        },
+        {
+          "x": "Product3",
+          "y": 32000
+        }
+      ],
+      "seriesName": "2023"
+    }
+  },
+  "chartName": "Sales Report",
+  "chartType": "CUSTOM_ECHART",
+  "customEChartConfig": "{{ ((chartType) => ( (() => {\n  // Define the series data with village data for the first 5 entries\n  const series = [\n    {\n      data: [5, 4, 3, 6, 7], // Voter self (first 5 values)\n      type: 'bar',\n      stack: 'voter',\n      name: 'Voter Self',\n      itemStyle: {\n        color: '#EEC861'  // Color for Voter Self\n      }\n    },\n    {\n      data: [2, 3, 1, 3, 4], // Cader (first 5 values)\n      type: 'bar',\n      stack: 'cader',\n      name: 'Cader',\n      itemStyle: {\n        color: '#D32F2F'  // Color for Cader\n      }\n    }\n  ];\n\n  // Define village names and their corresponding data for the first 5 entries\n  const villageNames = ['R.KOTTALA', 'HANCHANAHAL', 'KADADARABENCHI', 'VELPUMADUGU', 'PALTHURU'];\n\n  return {\n    title: {\n      text: 'Village Grievance Statistics',  // Updated title text\n      left: 'center',  // Center the title\n      top: 'top',  // Position title at the top\n      textStyle: {\n        fontSize: 18,  // Set title font size\n        fontWeight: 'bold'  // Set title font weight\n      }\n    },\n    legend: {\n      data: ['Voter Self', 'Cader'],  // Legend labels\n      top: '10%',  // Position the legend at the top\n      left: 'center'  // Center the legend horizontally\n    },\n    grid: {\n      left: '20%',  // Adjust left margin to fit labels\n      right: '10%',\n      top: '20%',  // Adjust top margin to accommodate the legend\n      bottom: '15%'\n    },\n    xAxis: {\n      type: 'value',  // Change to 'value' for horizontal bars\n    },\n    yAxis: {\n      type: 'category',\n      data: villageNames  // Y-axis categories (villages)\n    },\n    series: series.map((s) => ({\n      ...s,\n      data: s.data.map((value, index) => ({\n        value: value,\n        name: villageNames[index]\n      })),\n      label: {\n        show: true,  // Show labels\n        position: 'right',  // Position the labels on the right of the bars\n        formatter: '{c}'  // Display the value\n      }\n    })),\n    tooltip: {\n      trigger: 'axis',\n      axisPointer: {\n        type: 'shadow'\n      }\n    }\n  };\n})()))(Chart3.chartType) }}",
+  "customFusionChartConfig": {
+    "dataSource": {
+      "chart": {
+        "alignCaptionWithCanvas": 1,
+        "canvasPadding": "0",
+        "caption": "Sales Report",
+        "captionAlignment": "center",
+        "captionFontColor": "#231F20",
+        "captionFontSize": "24",
+        "captionPadding": "20",
+        "chartBottomMargin": "10",
+        "chartLeftMargin": "20",
+        "chartRightMargin": "40",
+        "chartTopMargin": "10",
+        "labelFontColor": "#716e6e",
+        "labelFontSize": "12",
+        "legendIconAlpha": "100",
+        "legendIconBgAlpha": "100",
+        "legendIconSides": "4",
+        "legendPosition": "top",
+        "theme": "fusion",
+        "xAxisName": "Product Line",
+        "xAxisNameFontColor": "#716e6e",
+        "xAxisNameFontSize": "14",
+        "yAxisName": "Revenue($)",
+        "yAxisNameFontColor": "#716e6e",
+        "yAxisNameFontSize": "14",
+        "yAxisValueFontColor": "#716e6e",
+        "yAxisValueFontSize": "12"
+      },
+      "data": [
+        {
+          "label": "Product1",
+          "value": 20000
+        },
+        {
+          "label": "Product2",
+          "value": 22000
+        },
+        {
+          "label": "Product3",
+          "value": 32000
+        }
+      ]
+    },
+    "type": "column2d"
+  },
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "customEChartConfig"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "flexVerticalAlignment": "start",
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "veuxb5nmvi",
+  "labelOrientation": "auto",
+  "leftColumn": 0,
+  "minWidth": 450,
+  "mobileBottomRow": 64.80000000000001,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 64,
+  "mobileTopRow": 32.80000000000001,
+  "needsErrorInfo": true,
+  "parentColumnSpace": 5.171875,
+  "parentId": "3ac88y3fed",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "showDataPointLabel": false,
+  "topRow": 31.2,
+  "type": "CHART_WIDGET",
+  "version": 1,
+  "widgetId": "nduyab9m49",
+  "widgetName": "Chart3",
+  "xAxisName": "Product Line",
+  "yAxisName": "Revenue($)"
+}

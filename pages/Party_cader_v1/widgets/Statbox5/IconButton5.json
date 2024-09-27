@@ -1,0 +1,38 @@
+{
+  "alignment": "start",
+  "animateLoading": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 4.1328125,
+  "boxShadow": "none",
+  "buttonColor": "#eec861",
+  "buttonStyle": "PRIMARY",
+  "buttonVariant": "PRIMARY",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "iconName": "data-connection",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "r8imisaary",
+  "leftColumn": 59.74750830564784,
+  "minWidth": 50,
+  "mobileBottomRow": 35.934375,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 6.772486772486772,
+  "mobileTopRow": 31.834375,
+  "needsErrorInfo": false,
+  "parentId": "9pxkbh4yrf",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 64,
+  "tooltip": "This shows the data quality score, indicating how complete the record is for this individual.This score reflects the completeness of one of those records.\n",
+  "topRow": 0,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "0ii9oft9mf",
+  "widgetName": "IconButton5"
+}

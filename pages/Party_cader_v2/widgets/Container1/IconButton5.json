@@ -1,0 +1,43 @@
+{
+  "alignment": "start",
+  "animateLoading": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 16.4,
+  "boxShadow": "none",
+  "buttonColor": "#231f20",
+  "buttonVariant": "PRIMARY",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconName": "refresh",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "pxu2drqk8l",
+  "leftColumn": 57.527180783817954,
+  "minWidth": 50,
+  "mobileBottomRow": 110.7875,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 2.522167487684729,
+  "mobileTopRow": 105.9875,
+  "needsErrorInfo": false,
+  "onClick": "{{party_cader_reset_botton.myFun1();\ncader_cards_stats.getCardData();}}",
+  "parentColumnSpace": 14.625,
+  "parentId": "3bxmrjlup1",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 60.76359039190898,
+  "topRow": 12.4,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "8nadl9bwvk",
+  "widgetName": "IconButton5"
+}

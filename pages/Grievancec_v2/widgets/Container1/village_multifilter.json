@@ -1,0 +1,79 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignment": "start",
+  "allowSelectAll": false,
+  "animateLoading": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 19.157812500000006,
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "displayName": "MultiSelect",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.801e0376f5d71c420e7b490da23a44a6.svg",
+  "isDeprecated": false,
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "dc6nw0pmg5",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Villages",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 44.216748768472904,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 98.625,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 64,
+  "mobileTopRow": 92.0265625,
+  "onOptionChange": "{{storeValue('selected_griveance_villages', village_multifilter.selectedOptionLabels);\ntotal_grievances_count.myFun1();\ntotal_open_grievances_count.myFun1();\ntotal_closed_grivevances__coun.myFun1();\naverage_ticket_time.myFun1();}}",
+  "optionLabel": "name",
+  "optionValue": "code",
+  "parentColumnSpace": 11.890625,
+  "parentId": "zjg87kjyes",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option(s)",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 58.955665024630534,
+  "searchTags": [
+    "dropdown",
+    "tags"
+  ],
+  "serverSideFiltering": false,
+  "sourceData": "{{ \n(() => {\n\n\t    // Filter the dataset based on selected filters\n    const filteredData = utills.filterDataPoints({\n        data: grievancesdataset_dev.data,\n        filterTypes: '*',\n        excludeTypes: ['Village']\n    });\n// Return the unique filtered data\nreturn _.uniqBy(filteredData.filter(req=>(req.request_mandal_key>0)).map(req => ({ \nname: req.request_village,\ncode: req.request_village_key\n})), 'code');\n})();\n}}\n",
+  "tags": [
+    "Select"
+  ],
+  "topRow": 12.559375,
+  "type": "MULTI_SELECT_WIDGET_V2",
+  "version": 1,
+  "widgetId": "qmwbhirmyb",
+  "widgetName": "village_multifilter"
+}

@@ -1,0 +1,55 @@
+{
+  "alignment": "end",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 9.2,
+  "boxShadow": "none",
+  "buttonColor": "{{load_login_ui_elements_db.data.Data.Palette.secondarylight}}",
+  "buttonStyle": "PRIMARY",
+  "buttonVariant": "PRIMARY",
+  "displayName": "Icon button",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "buttonColor"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "buttonColor"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "hideCard": false,
+  "iconName": "person",
+  "iconSVG": "/static/media/icon.b08054586989b185a0801e9a34f8ad49.svg",
+  "isDeprecated": false,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "f7xjnsqjlo",
+  "leftColumn": 56.20304568527919,
+  "minWidth": 50,
+  "mobileBottomRow": 22.874999999999996,
+  "mobileLeftColumn": 61.45273631840796,
+  "mobileRightColumn": 64,
+  "mobileTopRow": 18.075,
+  "parentId": "gsosuheqcm",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 64,
+  "searchTags": [
+    "click",
+    "submit"
+  ],
+  "tags": [
+    "Buttons"
+  ],
+  "topRow": 5.2,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "n4w90ccqo4",
+  "widgetName": "IconButton2"
+}

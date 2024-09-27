@@ -1,0 +1,79 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignment": "start",
+  "allowSelectAll": false,
+  "animateLoading": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 18.9984375,
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "displayName": "MultiSelect",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.801e0376f5d71c420e7b490da23a44a6.svg",
+  "isDeprecated": false,
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "dc6nw0pmg5",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Individual Categories",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 76.98749999999998,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 64,
+  "mobileTopRow": 70.38906249999998,
+  "onOptionChange": "{{storeValue('req_indv_cat_selected_values', req_indv_cat_multi_filter.selectedOptionLabels);\ntotal_data_counts.myFun1();}}",
+  "optionLabel": "name",
+  "optionValue": "code",
+  "parentColumnSpace": 11.890625,
+  "parentId": "zjg87kjyes",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option(s)",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 11.791133004926108,
+  "searchTags": [
+    "dropdown",
+    "tags"
+  ],
+  "serverSideFiltering": false,
+  "sourceData": "{{(() => {\n\n  // Filter the dataset based on selected filters\n  const filteredData = requestor_utils.filterDataPoints({\n    data: requestordataset_dev.data,\n    filterTypes: '*',\n    excludeTypes: ['IndvCats']\n  });\n\n\n  // Get unique requestor types\n  const indiv_cat = _.uniqBy(\n    _.flatten(\n      filteredData.filter(req =>req.requestor_type_name !== 'Association').map(item => \n        item.tags\n          .filter(tag => tag && tag.trim() !== '' && tag !== 'None' && tag !== 'NA')  // Filter out unwanted tags\n          .map(tag => ({\n            name: tag,  // Get tag name\n            code: tag   // Set code to tag name for uniqueness\n          }))\n      )\n    ),\n    'code'  // Ensure uniqueness by 'code'\n  );\n\n  return indiv_cat;  // Return the result as a unique list of requestor types\n})()}}\n",
+  "tags": [
+    "Select"
+  ],
+  "topRow": 12.4,
+  "type": "MULTI_SELECT_WIDGET_V2",
+  "version": 1,
+  "widgetId": "ysgi9fignp",
+  "widgetName": "req_indv_cat_multi_filter"
+}

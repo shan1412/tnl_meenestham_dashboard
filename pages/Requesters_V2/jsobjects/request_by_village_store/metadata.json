@@ -1,0 +1,24 @@
+{
+  "gitSyncId": "66d076092736952ca76d2bd0_66d187582736952ca76d2cba",
+  "id": "Requesters_V2_request_by_village_store",
+  "unpublishedCollection": {
+    "name": "request_by_village_store",
+    "pageId": "Requesters_V2",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      },
+      {
+        "name": "gender_hl",
+        "value": "''"
+      }
+    ]
+  }
+}

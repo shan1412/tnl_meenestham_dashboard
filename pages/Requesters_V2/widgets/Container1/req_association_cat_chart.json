@@ -1,0 +1,140 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignment": "start",
+  "allowScroll": false,
+  "animateLoading": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 85.39843749999987,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "chartData": {
+    "5zz1dwyawa": {
+      "data": [
+        {
+          "x": "Product1",
+          "y": 20000
+        },
+        {
+          "x": "Product2",
+          "y": 22000
+        },
+        {
+          "x": "Product3",
+          "y": 32000
+        }
+      ],
+      "seriesName": "2023"
+    }
+  },
+  "chartName": "Sales Report",
+  "chartType": "CUSTOM_ECHART",
+  "customEChartConfig": "{{ ((chartType) => ( \n(() => {\n\t// Retrieve selected filter values\n\tconst { selectedAssociationCat, chart_color_palette } = requestor_utils.getFilters();\n\n\t// Filter the dataset based on selected filters\n\tconst filteredData = requestor_utils.filterDataPoints({\n\t\tdata: requestordataset_dev.data,\n\t\tfilterTypes: '*',\n\t\texcludeTypes: ['ByAssocicat']\n\t});\n\n\t// Aggregate data by tag and count occurrences\n\tconst aggregatedData = filteredData\n\t.filter(item => item.requestor_type_name === 'Association')\n\t.reduce((acc, item) => {\n\t\titem.tags\n\t\t\t.filter(tag => tag != null && tag !== 'None' && tag !== '')\n\t\t\t.forEach(tag => {\n\t\t\tif (selectedAssociationCat.length === 0 || selectedAssociationCat.includes(tag)) {\n\t\t\t\tacc[tag] = (acc[tag] || 0) + 1; // Correct increment logic\n\t\t\t}\n\t\t});\n\t\treturn acc;\n\t}, {});\n\n\t// Convert the aggregated data into an array, sort by count, and take the top 5\n\tconst data = Object.entries(aggregatedData)\n\t.map(([tag, count]) => ({\n\t\ttag,\n\t\tcount,\n\t\tcolor: selectedAssociationCat.includes(tag) ? chart_color_palette.secondarylight : chart_color_palette.secondarylight // Differentiate between selected and unselected\n\t}))\n\t.sort((a, b) => b.count - a.count) // Sort in descending order by count\n\t.slice(0, 5) // Take the top 5\n\t.sort((a, b) => a.count - b.count); // Sort the top 5 in ascending order by count\n\n\t// Prepare data for the chart\n\treturn {\n\t\ttitle: {\n\t\t\ttext: 'Top 5 Association Categories as Requestors',\n\t\t\tleft: 'center',\n\t\t\ttop: 'top',\n\t\t\ttextStyle: {\n\t\t\t\tfontSize: 18,\n\t\t\t\tfontWeight: 'bold'\n\t\t\t}\n\t\t},\n\t\tgrid: {\n\t\t\tleft: '20%',\n\t\t\tright: '10%',\n\t\t\ttop: '10%',\n\t\t\tbottom: '15%'\n\t\t},\n\t\txAxis: {\n\t\t\ttype: 'value'\n\t\t},\n\t\tyAxis: {\n\t\t\ttype: 'category',\n\t\t\tdata: data.map(item => item.tag),\n\t\t\taxisLabel: {\n\t\t\t\tformatter: function(value) {\n\t\t\t\t\tconst maxLength = 10; // Number of characters per line\n\t\t\t\t\tconst words = value.split(' '); // Split by spaces\n\t\t\t\t\tlet line = '';\n\t\t\t\t\tlet result = '';\n\n\t\t\t\t\tfor (const word of words) {\n\t\t\t\t\t\tif ((line + word).length > maxLength) {\n\t\t\t\t\t\t\tresult += line.trim() + '\\n'; // Add line break\n\t\t\t\t\t\t\tline = word; // Start new line\n\t\t\t\t\t\t} else {\n\t\t\t\t\t\t\tline += (line.length === 0 ? '' : ' ') + word; // Add word to current line\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t\tresult += line.trim(); // Add the last line\n\t\t\t\t\treturn result;\n\t\t\t\t}\n\t\t\t}\n\t\t},\n\t\tseries: [\n\t\t\t{\n\t\t\t\ttype: 'bar',\n\t\t\t\tdata: data.map(item => ({\n\t\t\t\t\tvalue: item.count,\n\t\t\t\t\titemStyle: {\n\t\t\t\t\t\tcolor: item.color,\n\t\t\t\t\t\topacity: selectedAssociationCat && !selectedAssociationCat.includes(item.tag) ? 0.2 : 1 // Highlight selected\n\t\t\t\t\t}\n\t\t\t\t})),\n\t\t\t\tlabel: {\n\t\t\t\t\tshow: true,\n\t\t\t\t\tposition: 'right',\n\t\t\t\t\tformatter: '{c}', // Display the value\n\t\t\t\t\tfontSize: 12\n\t\t\t\t}\n\t\t\t}\n\t\t],\n\t\ttooltip: {\n\t\t\ttrigger: 'axis',\n\t\t\taxisPointer: {\n\t\t\t\ttype: 'shadow'\n\t\t\t}\n\t\t}\n\t};\n})()\n))(req_association_cat_chart.chartType) }}",
+  "customFusionChartConfig": {
+    "dataSource": {
+      "chart": {
+        "alignCaptionWithCanvas": 1,
+        "canvasPadding": "0",
+        "caption": "Sales Report",
+        "captionAlignment": "center",
+        "captionFontColor": "#231F20",
+        "captionFontSize": "24",
+        "captionPadding": "20",
+        "chartBottomMargin": "10",
+        "chartLeftMargin": "20",
+        "chartRightMargin": "40",
+        "chartTopMargin": "10",
+        "labelFontColor": "#716e6e",
+        "labelFontSize": "12",
+        "legendIconAlpha": "100",
+        "legendIconBgAlpha": "100",
+        "legendIconSides": "4",
+        "legendPosition": "top",
+        "theme": "fusion",
+        "xAxisName": "Product Line",
+        "xAxisNameFontColor": "#716e6e",
+        "xAxisNameFontSize": "14",
+        "yAxisName": "Revenue($)",
+        "yAxisNameFontColor": "#716e6e",
+        "yAxisNameFontSize": "14",
+        "yAxisValueFontColor": "#716e6e",
+        "yAxisValueFontSize": "12"
+      },
+      "data": [
+        {
+          "label": "Product1",
+          "value": 20000
+        },
+        {
+          "label": "Product2",
+          "value": 22000
+        },
+        {
+          "label": "Product3",
+          "value": 32000
+        }
+      ]
+    },
+    "type": "column2d"
+  },
+  "displayName": "Chart",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "customEChartConfig"
+    }
+  ],
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onDataPointClick"
+    }
+  ],
+  "flexVerticalAlignment": "start",
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.8eea39845729f7f4bfadeecd3810a09d.svg",
+  "isDeprecated": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "ed4zix1hrb",
+  "labelOrientation": "auto",
+  "leftColumn": 32,
+  "minWidth": 450,
+  "mobileBottomRow": 243.3812500000002,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 64,
+  "mobileTopRow": 211.3812500000002,
+  "onDataPointClick": "{{request_by_associ_select_store.myFun1();\ntotal_data_counts.myFun1();}}",
+  "parentColumnSpace": 11.890625,
+  "parentId": "zjg87kjyes",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "searchTags": [
+    "graph",
+    "visuals",
+    "visualisations"
+  ],
+  "showDataPointLabel": false,
+  "tags": [
+    "Display"
+  ],
+  "topRow": 53.3984375,
+  "type": "CHART_WIDGET",
+  "version": 1,
+  "widgetId": "ab8sikqwil",
+  "widgetName": "req_association_cat_chart",
+  "xAxisName": "Product Line",
+  "yAxisName": "Revenue($)"
+}

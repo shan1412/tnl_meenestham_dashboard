@@ -1,0 +1,2 @@
+DELETE FROM connecthub."party_cader_dummy_data_set"
+  WHERE "Mandal" = {{data_table.triggeredRow.Mandal}};

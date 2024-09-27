@@ -1,0 +1,78 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignment": "start",
+  "animateLoading": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 18.9984375,
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "displayName": "MultiSelect",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.801e0376f5d71c420e7b490da23a44a6.svg",
+  "isDeprecated": false,
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "dc6nw0pmg5",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Association Categories",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 11.791133004926108,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 84.38593749999998,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 64,
+  "mobileTopRow": 77.78749999999998,
+  "onOptionChange": "{{storeValue('req_associ_cat_selected_values', req_associ_cat_multi_filter.selectedOptionLabels);\ntotal_data_counts.myFun1();}}",
+  "optionLabel": "name",
+  "optionValue": "code",
+  "parentColumnSpace": 11.890625,
+  "parentId": "zjg87kjyes",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option(s)",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 23.582266009852216,
+  "searchTags": [
+    "dropdown",
+    "tags"
+  ],
+  "serverSideFiltering": false,
+  "sourceData": "{{\n(() => {\n  // Filter the dataset based on selected filters\n  const filteredData = requestor_utils.filterDataPoints({\n    data: requestordataset_dev.data,\n    filterTypes: '*',\n    excludeTypes: ['AssociCats']\n  });\n  // Step 3: Create a unique list of requestor type names and codes from the filtered data\nconst association_cat = _.uniqBy(\n  _.flatten(\n    filteredData.filter(req =>req.requestor_type_name !== 'Individual').map(item => \n      item.tags\n        .filter(tag => tag && tag.trim() !== '' && tag !== 'None' && tag !== 'NA')  // Filter out unwanted tags\n        .map(tag => ({\n          name: tag,  // Get tag name\n          code: tag   // Set code to tag name for uniqueness\n        }))\n    )\n  ),\n  'code'  // Ensure uniqueness by 'code'\n);\n\n  return association_cat;  // Return the result as a unique list of requestor types\n})()\n}}\n",
+  "tags": [
+    "Select"
+  ],
+  "topRow": 12.4,
+  "type": "MULTI_SELECT_WIDGET_V2",
+  "version": 1,
+  "widgetId": "h8mrcl613t",
+  "widgetName": "req_associ_cat_multi_filter"
+}

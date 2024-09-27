@@ -1,0 +1,24 @@
+{
+  "gitSyncId": "66daa2a0ce775502082970ac_4a87d6f1-3646-43a8-8ab2-259b0d3a2d46",
+  "id": "Party_cader_v2_cadre_trend_store",
+  "unpublishedCollection": {
+    "name": "cadre_trend_store",
+    "pageId": "Party_cader_v2",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      },
+      {
+        "name": "gender_hl",
+        "value": "''"
+      }
+    ]
+  }
+}

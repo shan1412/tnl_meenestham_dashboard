@@ -1,0 +1,13 @@
+UPDATE connecthub."party_cader_dummy_data_set" SET
+		"AC" = '{{update_form.fieldState.AC.isVisible ? update_form.formData.AC : update_form.sourceData.AC}}',
+		"Village" = '{{update_form.fieldState.Village.isVisible ? update_form.formData.Village : update_form.sourceData.Village}}',
+    "Booth" = '{{update_form.fieldState.Booth.isVisible ? update_form.formData.Booth : update_form.sourceData.Booth}}',
+		"VoterId" = '{{update_form.fieldState.VoterId.isVisible ? update_form.formData.VoterId : update_form.sourceData.VoterId}}',
+		"Cader Name" = '{{update_form.fieldState.Cader Name.isVisible ? update_form.formData.Cader Name : update_form.sourceData.Cader Name}}',
+		"Gender" = '{{update_form.fieldState.Gender.isVisible ? update_form.formData.Gender : update_form.sourceData.Gender}}',
+		"Age" = '{{update_form.fieldState.Age.isVisible ? update_form.formData.Age : update_form.sourceData.Age}}',
+		"Role" = '{{update_form.fieldState.Role.isVisible ? update_form.formData.Role : update_form.sourceData.Role}}',
+		"Mobile number" = '{{update_form.fieldState.Mobile number.isVisible ? update_form.formData.Mobile number : update_form.sourceData.Mobile number}}',
+		"No. of Unique mobile numbers" = '{{update_form.fieldState.No. of Unique mobile numbers.isVisible ? update_form.formData.No. of Unique mobile numbers : update_form.sourceData.No. of Unique mobile numbers}}',
+		"No. of voters per mobile number" = '{{update_form.fieldState.No. of voters per mobile number.isVisible ? update_form.formData.No. of voters per mobile number : update_form.sourceData.No. of voters per mobile number}}'
+	WHERE "Mandal" = {{data_table.selectedRow.Mandal}};

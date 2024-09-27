@@ -1,0 +1,55 @@
+{
+  "gitSyncId": "66daa2a0ce775502082970ac_069e32ea-4f46-43dd-a144-34243e53fe78",
+  "unpublishedPage": {
+    "isHidden": true,
+    "layouts": [
+      {
+        "dsl": {
+          "backgroundColor": "none",
+          "bottomRow": 2211.984375000001,
+          "canExtend": true,
+          "containerStyle": "none",
+          "detachFromLayout": true,
+          "dynamicBindingPathList": [],
+          "flexLayers": [
+            {
+              "children": [
+                {
+                  "align": "start",
+                  "id": "gj4m7ybc5l"
+                }
+              ]
+            },
+            {
+              "children": [
+                {
+                  "align": "center",
+                  "id": "095qztn9ge"
+                }
+              ]
+            }
+          ],
+          "leftColumn": 0,
+          "minHeight": 490,
+          "mobileBottomRow": 3081.875,
+          "mobileTopRow": 0,
+          "parentColumnSpace": 1,
+          "parentRowSpace": 1,
+          "positioning": "vertical",
+          "responsiveBehavior": "fill",
+          "rightColumn": 1224,
+          "snapColumns": 64,
+          "snapRows": 47,
+          "topRow": 0,
+          "type": "CANVAS_WIDGET",
+          "useAutoLayout": true,
+          "version": 90,
+          "widgetId": "0",
+          "widgetName": "MainContainer"
+        }
+      }
+    ],
+    "name": "Party_cader_v2",
+    "slug": "party-cader-v2"
+  }
+}

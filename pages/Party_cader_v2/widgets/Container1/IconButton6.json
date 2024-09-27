@@ -1,0 +1,43 @@
+{
+  "alignment": "start",
+  "animateLoading": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 16.4,
+  "boxShadow": "none",
+  "buttonColor": "#231f20",
+  "buttonVariant": "PRIMARY",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconName": "panel-table",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "pxu2drqk8l",
+  "leftColumn": 60.76359039190898,
+  "minWidth": 50,
+  "mobileBottomRow": 110.7875,
+  "mobileLeftColumn": 2.522167487684729,
+  "mobileRightColumn": 5.044334975369458,
+  "mobileTopRow": 105.9875,
+  "needsErrorInfo": false,
+  "onClick": "{{showModal(select_table.name);}}",
+  "parentColumnSpace": 14.625,
+  "parentId": "3bxmrjlup1",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 64,
+  "topRow": 12.4,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "7sc8gipwn9",
+  "widgetName": "IconButton6"
+}

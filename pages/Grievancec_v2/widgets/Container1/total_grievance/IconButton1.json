@@ -1,0 +1,53 @@
+{
+  "alignment": "start",
+  "animateLoading": false,
+  "borderRadius": "0.375rem",
+  "bottomRow": 9.2984375,
+  "boxShadow": "none",
+  "buttonColor": "{{utills.myFun1.data.secondarylight}}",
+  "buttonStyle": "PRIMARY",
+  "buttonVariant": "PRIMARY",
+  "displayName": "Icon button",
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "buttonColor"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "hideCard": false,
+  "iconName": "applications",
+  "iconSVG": "/static/media/icon.b08054586989b185a0801e9a34f8ad49.svg",
+  "isDeprecated": false,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "s6ucv3zqfe",
+  "leftColumn": 54.51851851851852,
+  "minWidth": 50,
+  "mobileBottomRow": 14.657812499999999,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 2.5472636815920398,
+  "mobileTopRow": 9.759374999999999,
+  "parentId": "ikcrdbi3pf",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 64,
+  "searchTags": [
+    "click",
+    "submit"
+  ],
+  "tags": [
+    "Buttons"
+  ],
+  "tooltip": "Total Grievances: Sum of all status categorized under different statuses: Draft, In Review, Verified, No Action Required, Sent for Correction, Done, and In Progress.",
+  "topRow": 5.2,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "mlecx2aqua",
+  "widgetName": "IconButton1"
+}
