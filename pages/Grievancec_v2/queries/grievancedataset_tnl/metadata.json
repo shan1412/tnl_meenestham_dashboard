@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT *,\n    CASE \n        WHEN location_granularity = 'Blanks' OR location_granularity IS NULL THEN 'Non-Location Specific' \n        ELSE 'Location Specific' \n    END AS \"is_location_specific\",\n    TO_CHAR(created_on, 'YYYY-MM-DD') AS formatted_created_on \nFROM hubviews.vw_grievancedataset \nWHERE  \"ClientKey\" = {{appsmith.URL.queryParams.client_key}};",
+      "body": "SELECT *,\n    CASE \n        WHEN location_granularity = 'Blanks' OR location_granularity IS NULL OR location_granularity = 'NA' THEN 'Non-Location Specific' \n        ELSE 'Location Specific' \n    END AS \"is_location_specific\",\n    TO_CHAR(created_on, 'YYYY-MM-DD') AS formatted_created_on,\n    CASE \n        WHEN location_granularity = 'NA' THEN 'Not Specified'\n        ELSE location_granularity \n    END AS location_granularity_modified\nFROM hubviews.vw_grievancedataset \nWHERE \"ClientKey\" = {{appsmith.URL.queryParams.client_key}};\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

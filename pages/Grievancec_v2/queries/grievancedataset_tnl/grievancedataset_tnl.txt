@@ -1,8 +1,12 @@
 SELECT *,
     CASE 
-        WHEN location_granularity = 'Blanks' OR location_granularity IS NULL THEN 'Non-Location Specific' 
+        WHEN location_granularity = 'Blanks' OR location_granularity IS NULL OR location_granularity = 'NA' THEN 'Non-Location Specific' 
         ELSE 'Location Specific' 
     END AS "is_location_specific",
-    TO_CHAR(created_on, 'YYYY-MM-DD') AS formatted_created_on 
+    TO_CHAR(created_on, 'YYYY-MM-DD') AS formatted_created_on,
+    CASE 
+        WHEN location_granularity = 'NA' THEN 'Not Specified'
+        ELSE location_granularity 
+    END AS location_granularity_modified
 FROM hubviews.vw_grievancedataset 
-WHERE  "ClientKey" = {{appsmith.URL.queryParams.client_key}};
+WHERE "ClientKey" = {{appsmith.URL.queryParams.client_key}};

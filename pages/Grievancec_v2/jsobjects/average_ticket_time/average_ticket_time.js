@@ -3,37 +3,13 @@ export default {
   myVar2: {},
 
   myFun1() {
-    const selected_grievance_time_line = appsmith.store.grievence_time_line || '';
-    const selectedGranularity = appsmith.store.granularity_datapoint || '';
-    const selectedGrievanceageReport = appsmith.store.grievance_age_data_point || '';
-    const selectedGrievanceRequestType = appsmith.store.grievanceRequestType_name || '';
-    const selectGrievanceByConstituency = appsmith.store.grievence_by_constituency || '';
-    const selectGrievanceByPc = appsmith.store.grievence_by_parliament_constituency || '';
-    const selectGrievanceByMandal = appsmith.store.grievence_by_mandal || '';
-    const selectGrievanceByVillage = appsmith.store.grievence_by_village || '';
-    const selectedGrievancePriority = appsmith.store.priority_datapoint || '';
-    const selectGrievanceByLocationspecific = appsmith.store.grievance_locationSpecific || '';
+    // Filter the dataset based on selected filters
+    const filteredData = utills.filterDataPoints({
+        data: grievancedataset_tnl.data,
+        filterTypes: '*',
+        excludeTypes: []
+    });
 
-    const selected_ac_names = appsmith.store.selected_ac_names || [];
-    const selected_grievance_mandal = appsmith.store.selected_grivence_Mandal || [];
-    const selected_grievance_village = appsmith.store.selected_griveance_villages || [];
-
-    const filteredData = grievancedataset_tnl.data.filter(req =>
-      !['Draft', 'In Review', 'Verified', 'Sent for Correction', 'In Progress'].includes(req.grievance_status) &&
-      (selectedGranularity === '' || selectedGranularity.includes(req.location_granularity)) &&
-      (selectedGrievanceRequestType === '' || selectedGrievanceRequestType.includes(req.grievance_type)) &&
-      (selectGrievanceByConstituency === '' || selectGrievanceByConstituency.includes(req.request_ac_name)) &&
-      (selectGrievanceByMandal === '' || selectGrievanceByMandal.includes(req.request_mandal)) &&
-      (selectGrievanceByVillage === '' || selectGrievanceByVillage.includes(req.request_village)) &&
-      (selectedGrievancePriority === '' || selectedGrievancePriority.includes(req.priority)) &&
-      (selectedGrievanceageReport === '' || selectedGrievanceageReport.includes(req.age_category)) &&
-      (selectGrievanceByPc === '' || selectGrievanceByPc.includes(req.request_pc_name)) &&
-      (selectGrievanceByLocationspecific === '' || selectGrievanceByLocationspecific.includes(req.is_location_specific)) &&
-      (selected_ac_names.length === 0 || selected_ac_names.includes(req.request_ac_name)) &&
-      (selected_grievance_mandal.length === 0 || selected_grievance_mandal.includes(req.grievance_type)) &&
-      (selected_grievance_village.length === 0 || selected_grievance_village.includes(req.request_village))
-    );
-		console.log(filteredData)
     // Get the count of filtered grievances
     const grievanceCount = filteredData.length;
 
@@ -43,8 +19,9 @@ export default {
       if (!acc[source]) {
         acc[source] = { count: 0, totalAgeInDays: 0 };
       }
+      const ageInDays = Math.max(req.age_in_days || 0, 0); // Ensure non-negative age
       acc[source].count += 1;  // Increment the count for each source
-      acc[source].totalAgeInDays += req.age_in_days || 0;  // Accumulate total age in days
+      acc[source].totalAgeInDays += ageInDays;  // Accumulate total age in days
       return acc;
     }, {});
 
@@ -52,8 +29,8 @@ export default {
     const sourceAggregationWithData = Object.keys(sourceAggregation).reduce((acc, source) => {
       const data = sourceAggregation[source];
       const avgAgeInDays = data.count > 0 ? data.totalAgeInDays / data.count : 0;
-      const days = Math.floor(avgAgeInDays);
-      const hours = Math.floor((avgAgeInDays - days) * 24);
+      const days = Math.max(Math.floor(avgAgeInDays), 0); // Ensure no negative days
+      const hours = Math.max(Math.floor((avgAgeInDays - days) * 24), 0); // Ensure no negative hours
       acc[source] = {
         count: data.count || "Data Insufficient",
         avgAge: data.count > 0 ? `${days}Days, ${hours}Hrs` : "Data Insufficient"
@@ -62,19 +39,19 @@ export default {
     }, {});
 
     // Calculate the overall average age
-    const totalAgeInDays = filteredData.reduce((sum, req) => sum + (req.age_in_days || 0), 0);
-    const avgAgeInDaysOverall = filteredData.length > 0 ? totalAgeInDays / filteredData.length : 0;
-    const overallDays = Math.floor(avgAgeInDaysOverall);
-    const overallHours = Math.floor((avgAgeInDaysOverall - overallDays) * 24);
+    const totalAgeInDays = filteredData.reduce((sum, req) => sum + Math.max(req.age_in_days || 0, 0), 0); // Ensure non-negative sum
+    const avgAgeInDaysOverall = grievanceCount > 0 ? totalAgeInDays / grievanceCount : 0;
+    const overallDays = Math.max(Math.floor(avgAgeInDaysOverall), 0); // Ensure no negative days
+    const overallHours = Math.max(Math.floor((avgAgeInDaysOverall - overallDays) * 24), 0); // Ensure no negative hours
 
     // Ensure grievanceCount is a number or "Data Insufficient"
-    const validGrievanceCount = typeof grievanceCount === 'number' ? grievanceCount : "Data Insufficient";
+    const validGrievanceCount = typeof grievanceCount === 'number' && grievanceCount >= 0 ? grievanceCount : "Data Insufficient";
 
     // Return both the grievance count, source aggregation with averages, and overall average ticket time
     return {
       grievanceCount: validGrievanceCount,
       sourceAggregation: sourceAggregationWithData,
-      avgTicketTimeOverall: filteredData.length > 0 ? `${overallDays}Days, ${overallHours}Hrs` : "Data Insufficient"
+      avgTicketTimeOverall: grievanceCount > 0 ? `${overallDays}Days, ${overallHours}Hrs` : "Data Insufficient"
     };
   },
 

@@ -48,10 +48,10 @@
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 76.43749999999997,
+  "mobileBottomRow": 73.23749999999998,
   "mobileLeftColumn": 0,
   "mobileRightColumn": 64,
-  "mobileTopRow": 69.83749999999998,
+  "mobileTopRow": 66.63749999999999,
   "onOptionChange": "{{storeValue('selected_griveance_type_selected_values', grievanc_req_type_multi_filter.selectedOptionLabels);\ntotal_open_grievances_count.myFun1();\ntotal_grievances_count.myFun1();\ntotal_closed_grivevances__coun.myFun1();\naverage_ticket_time.myFun1();}}",
   "optionLabel": "name",
   "optionValue": "code",
@@ -61,7 +61,7 @@
   "placeholderText": "Select option(s)",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 15.058823529411764,
+  "rightColumn": 22.45614035087719,
   "searchTags": [
     "dropdown",
     "tags"
