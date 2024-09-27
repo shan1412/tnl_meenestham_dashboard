@@ -2,7 +2,7 @@
   "alignment": "start",
   "animateLoading": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 17.296875,
+  "bottomRow": 16.659375,
   "boxShadow": "none",
   "buttonColor": "#18181b",
   "buttonVariant": "PRIMARY",
@@ -26,7 +26,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "reaxjkd1og",
-  "leftColumn": 56.675250357653795,
+  "leftColumn": 56.470588235294116,
   "minWidth": 50,
   "mobileBottomRow": 73.89374999999998,
   "mobileLeftColumn": 64,
@@ -38,7 +38,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "hug",
-  "rightColumn": 60.3376251788269,
+  "rightColumn": 60.23529411764706,
   "searchTags": [
     "click",
     "submit"
@@ -47,7 +47,7 @@
     "Buttons"
   ],
   "tooltip": "Reset Filters",
-  "topRow": 13.196874999999999,
+  "topRow": 12.559375,
   "type": "ICON_BUTTON_WIDGET",
   "version": 1,
   "widgetId": "r4ikwv3ycu",

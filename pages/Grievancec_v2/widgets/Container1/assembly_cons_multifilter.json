@@ -3,7 +3,7 @@
   "alignment": "start",
   "animateLoading": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 19.796874999999993,
+  "bottomRow": 19.159374999999994,
   "boxShadow": "none",
   "defaultOptionValue": "",
   "displayName": "MultiSelect",
@@ -43,7 +43,7 @@
   "labelText": "Assembly Constituency",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 14.168812589413449,
+  "leftColumn": 14.117647058823529,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -60,7 +60,7 @@
   "placeholderText": "Select option(s)",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 28.337625178826897,
+  "rightColumn": 28.235294117647058,
   "searchTags": [
     "dropdown",
     "tags"
@@ -70,7 +70,7 @@
   "tags": [
     "Select"
   ],
-  "topRow": 13.196874999999999,
+  "topRow": 12.559375,
   "type": "MULTI_SELECT_WIDGET_V2",
   "version": 1,
   "widgetId": "wabxuj86qh",

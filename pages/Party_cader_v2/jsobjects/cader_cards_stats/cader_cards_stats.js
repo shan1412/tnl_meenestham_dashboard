@@ -16,10 +16,10 @@ export default {
 			if (Array.isArray(grievances)) {
 				return grievances; // Return as-is if it's already an array
 			} else if (typeof grievances === 'string') {
-				// If it's a string, you may want to split it (assuming a comma-separated string)
+				// If it's a string, split it (assuming a comma-separated string)
 				return grievances.split(',');
 			} else if (typeof grievances === 'object' && grievances !== null) {
-				// If it's an object, handle it as needed (e.g., convert values to an array if relevant)
+				// If it's an object, handle it as needed (convert values to an array if relevant)
 				return Object.values(grievances);
 			}
 			return []; // Default to an empty array if none of the above
@@ -28,47 +28,44 @@ export default {
 		// Calculate total caders
 		const totalCaders = filteredData.length;
 
-		// Calculate total grievances
-		// const totalGrievances = filteredData.reduce((acc, cader) => {
-			// const grievances = getGrievancesArray(cader.requestor_grievances);
-			// return acc + grievances.length;
-		// }, 0);
 		// Calculate total unique grievances
 		const totalUniqueGrievances = filteredData.reduce((acc, cader) => {
-				const grievances = getGrievancesArray(cader.requestor_grievances);
-
-				// Add unique grievances to the accumulator
-				grievances.forEach(grievance => {
-						acc.add(grievance); // Assuming grievances are unique strings or objects
-				});
-
-				return acc;
+			const grievances = getGrievancesArray(cader.requestor_grievances);
+			grievances.forEach(grievance => {
+				acc.add(grievance); // Assuming grievances are unique strings or objects
+			});
+			return acc;
 		}, new Set());
 
 		// Get the total count of unique grievances
 		const uniqueGrievanceCount = totalUniqueGrievances.size;
 
-
-		// Calculate open grievances
+		// Calculate grievances matching the specified statuses for open grievances
 		const openGrievances = filteredData.reduce((acc, cader) => {
 			const grievances = getGrievancesArray(cader.requestor_grievances);
-			const openCount = grievances.filter(grievance => grievance.status === "open").length;
-			return acc + openCount;
+			const count = grievances.filter(grievance => 
+																			!["Done","No Action Required"].includes(grievance.grievance_status)
+																		 ).length;
+			return acc + count; // Total count of matching open grievances
 		}, 0);
+
+
 
 		// Calculate closed grievances
 		const closedGrievances = filteredData.reduce((acc, cader) => {
 			const grievances = getGrievancesArray(cader.requestor_grievances);
-			const closedCount = grievances.filter(grievance => grievance.status === "closed").length;
-			return acc + closedCount;
+			const count = grievances.filter(grievance => 
+																			["Done","No Action Required"].includes(grievance.grievance_status)
+																		 ).length;
+			return acc + count; // Total count of matching closed grievances
 		}, 0);
 
 		// Return the results
 		return {
 			totalCaders,
 			uniqueGrievanceCount,
-			openGrievances,
-			closedGrievances
+			openGrievances, // Count of open grievances
+			closedGrievances // Count of closed grievances
 		};
 	},
 };

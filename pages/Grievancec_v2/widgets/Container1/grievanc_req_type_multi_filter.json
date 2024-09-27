@@ -4,7 +4,7 @@
   "allowSelectAll": false,
   "animateLoading": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 19.796874999999993,
+  "bottomRow": 19.159374999999994,
   "boxShadow": "none",
   "defaultOptionValue": "",
   "displayName": "MultiSelect",
@@ -61,7 +61,7 @@
   "placeholderText": "Select option(s)",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 14.168812589413449,
+  "rightColumn": 14.117647058823529,
   "searchTags": [
     "dropdown",
     "tags"
@@ -71,7 +71,7 @@
   "tags": [
     "Select"
   ],
-  "topRow": 13.196874999999999,
+  "topRow": 12.559375,
   "type": "MULTI_SELECT_WIDGET_V2",
   "version": 1,
   "widgetId": "vychxgyy47",

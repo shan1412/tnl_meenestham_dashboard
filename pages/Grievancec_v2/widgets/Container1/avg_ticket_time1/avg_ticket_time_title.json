@@ -2,7 +2,7 @@
   "alignment": "start",
   "animateLoading": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 4.6375,
+  "bottomRow": 4,
   "displayName": "Text",
   "dynamicBindingPathList": [
     {
