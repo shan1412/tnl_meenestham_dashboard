@@ -4,7 +4,7 @@
   "allowSelectAll": false,
   "animateLoading": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 20.8390625,
+  "bottomRow": 19.159374999999997,
   "boxShadow": "none",
   "defaultOptionValue": "",
   "displayName": "MultiSelect",
@@ -71,7 +71,7 @@
   "tags": [
     "Select"
   ],
-  "topRow": 14.2390625,
+  "topRow": 12.559375,
   "type": "MULTI_SELECT_WIDGET_V2",
   "version": 1,
   "widgetId": "vychxgyy47",

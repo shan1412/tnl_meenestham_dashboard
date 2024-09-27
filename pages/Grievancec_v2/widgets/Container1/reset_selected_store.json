@@ -2,7 +2,7 @@
   "alignment": "start",
   "animateLoading": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 18.3390625,
+  "bottomRow": 16.659374999999997,
   "boxShadow": "none",
   "buttonColor": "#18181b",
   "buttonVariant": "PRIMARY",
@@ -47,7 +47,7 @@
     "Buttons"
   ],
   "tooltip": "Reset Filters",
-  "topRow": 14.2390625,
+  "topRow": 12.559375,
   "type": "ICON_BUTTON_WIDGET",
   "version": 1,
   "widgetId": "r4ikwv3ycu",
