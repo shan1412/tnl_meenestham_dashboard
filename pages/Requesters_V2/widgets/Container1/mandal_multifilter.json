@@ -43,14 +43,14 @@
   "labelText": "Mandal",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 45.17647058823529,
+  "leftColumn": 99.09677419354838,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 80.39999999999998,
+  "mobileBottomRow": 77.99999999999999,
   "mobileLeftColumn": 0,
   "mobileRightColumn": 64,
-  "mobileTopRow": 73.79999999999997,
+  "mobileTopRow": 71.39999999999999,
   "onOptionChange": "{{storeValue('req_mandal_selected_values', mandal_multifilter.selectedOptionLabels);\ntotal_data_counts.myFun1();}}",
   "optionLabel": "name",
   "optionValue": "code",
@@ -60,13 +60,13 @@
   "placeholderText": "Select option(s)",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 60.23529411764706,
+  "rightColumn": 132.1290322580645,
   "searchTags": [
     "dropdown",
     "tags"
   ],
   "serverSideFiltering": false,
-  "sourceData": "{{\n(() => {\n  // Filter the dataset based on selected filters\n  const filteredData = requestor_utils.filterDataPoints({\n    data: requestordataset_tnl.data,\n    filterTypes: '*',\n    excludeTypes: ['Mandal']\n  });\n\n  // Step 3: Create a unique list of requestor type names and codes\nconst mandal_dropdown =\n\t\t\t_.uniqBy(\n    filteredData.map(item => ({ \n      name: item.mandal,  // Get requestor type name\n      code: item.mandal_key   // Set code to requestor type name for constituency_name\n    })), \n    'code'  // Ensure uniqueness by 'code'\n  );\n\n  return mandal_dropdown;  // Return the result as a unique list of requestor types\n})()\n}}\n",
+  "sourceData": "{{\n(() => {\n  // Filter the dataset based on selected filters\n  const filteredData = requestor_utils.filterDataPoints({\n    data: requestordataset_tnl.data,\n    filterTypes: '*',\n    excludeTypes: ['Mandal']\n  });\n\n  // Step 3: Create a unique list of requestor type names and codes\nconst mandal_dropdown =\n\t\t\t_.uniqBy(\n    filteredData.filter(item => item.mandal_key>0).map(item => ({ \n      name: item.mandal,  // Get requestor type name\n      code: item.mandal_key   // Set code to requestor type name for constituency_name\n    })), \n    'code'  // Ensure uniqueness by 'code'\n  );\n\n  return mandal_dropdown;  // Return the result as a unique list of requestor types\n})()\n}}\n",
   "tags": [
     "Select"
   ],

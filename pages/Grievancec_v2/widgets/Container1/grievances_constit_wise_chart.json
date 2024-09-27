@@ -4,7 +4,7 @@
   "allowScroll": false,
   "animateLoading": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 180.3593750000001,
+  "bottomRow": 180.9968750000001,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "chartData": {
     "5zz1dwyawa": {
@@ -119,7 +119,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 32,
+  "rightColumn": 39.29824561403509,
   "searchTags": [
     "graph",
     "visuals",
@@ -129,7 +129,7 @@
   "tags": [
     "Display"
   ],
-  "topRow": 150.3593750000001,
+  "topRow": 150.9968750000001,
   "type": "CHART_WIDGET",
   "version": 1,
   "widgetId": "fw67ugs7au",
