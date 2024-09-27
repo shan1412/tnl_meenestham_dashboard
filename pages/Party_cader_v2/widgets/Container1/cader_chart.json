@@ -4,7 +4,7 @@
   "allowScroll": false,
   "animateLoading": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 84.4,
+  "bottomRow": 79.4,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "chartData": {
     "ea298t0py7": {
@@ -111,7 +111,7 @@
   "mobileTopRow": 93.99999999999997,
   "mobileWidthInPercentage": 0.9786096256684492,
   "needsErrorInfo": true,
-  "onDataPointClick": "{{cader_store.myFun1();\ncader_cards_stats.getCardData();}}",
+  "onDataPointClick": "{{cader_cards_stats.getCardData();}}",
   "parentColumnSpace": 18.125,
   "parentId": "3bxmrjlup1",
   "parentRowSpace": 10,
@@ -124,7 +124,7 @@
   "version": 1,
   "widgetId": "094qmczxo8",
   "widgetName": "cader_chart",
-  "widthInPercentage": 0.9631728045325779,
+  "widthInPercentage": 0.946058091286307,
   "xAxisName": "Product Line",
   "yAxisName": "Revenue($)"
 }
