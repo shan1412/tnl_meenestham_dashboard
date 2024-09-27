@@ -6,7 +6,7 @@ export default {
 	getCardData() {
 		// Filter the dataset based on selected filters
 		const filteredData = party_cader_utils.filterDataPoints({
-			data: party_cader_dataset_dev.data,
+			data: party_cader_dataset_tnl.data,
 			filterTypes: '*',
 			excludeTypes: [] // No fields are excluded
 		});
