@@ -18,7 +18,7 @@ export default {
     const selected_grievance_mandal = appsmith.store.selected_grivence_Mandal || [];
     const selected_grievance_village = appsmith.store.selected_griveance_villages || [];
 
-    const filteredData = grievancesdataset_dev.data.filter(req =>
+    const filteredData = gr.filter(req =>
 
       ["In Progress","Draft","Verified","In Review","Send For Correction"].includes(req.grievance_status) &&
       (selectedGranularity === '' || selectedGranularity.includes(req.location_granularity)) &&

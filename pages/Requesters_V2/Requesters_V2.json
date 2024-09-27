@@ -7,7 +7,7 @@
       {
         "dsl": {
           "backgroundColor": "none",
-          "bottomRow": 2149.984374999998,
+          "bottomRow": 2149.9999999999977,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
@@ -32,7 +32,7 @@
           ],
           "leftColumn": 0,
           "minHeight": 470,
-          "mobileBottomRow": 4293.812500000003,
+          "mobileBottomRow": 3860.390625000004,
           "mobileTopRow": 0,
           "parentColumnSpace": 1,
           "parentRowSpace": 1,

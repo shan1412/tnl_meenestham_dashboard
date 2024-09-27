@@ -27,7 +27,7 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "name": "association_tags_check_dev",
     "pageId": "Grievancec_v2",
     "userSetOnLoad": false

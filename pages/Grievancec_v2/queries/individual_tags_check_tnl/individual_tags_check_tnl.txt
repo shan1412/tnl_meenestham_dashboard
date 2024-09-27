@@ -1,0 +1,4 @@
+SELECT DISTINCT COALESCE("ReportingCategory", "TagType") AS "Tags" 
+FROM masters."TagList" tl 
+WHERE "TagType" = 'RequestorType' 
+  AND "ClientKey" = {{appsmith.URL.queryParams.client_key}};

@@ -5,7 +5,7 @@ export default {
   myFun1() {
     // Filter the dataset based on selected filters
     const filteredData = utills.filterDataPoints({
-        data: grievancesdataset_dev.data,
+        data: grievancedataset_tnl.data,
         filterTypes: '*',
         excludeTypes: []
     });

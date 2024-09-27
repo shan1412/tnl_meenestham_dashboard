@@ -4,7 +4,7 @@
   "allowScroll": false,
   "animateLoading": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 52.1984375,
+  "bottomRow": 52.2,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "chartData": {
     "lgwz05z0w9": {
@@ -27,7 +27,7 @@
   },
   "chartName": "Sales Report",
   "chartType": "CUSTOM_ECHART",
-  "customEChartConfig": "{{ ((chartType) => ( (() => {\n    // Retrieve selected filter values\n    const { selectedRequestorTypeName, chart_color_palette } = requestor_utils.getFilters();\n\n    // Filter the dataset based on selected filters\n    const filteredData = requestor_utils.filterDataPoints({\n        data: requestordataset_dev.data,\n        filterTypes: '*',\n        excludeTypes: ['ByRequestorType']\n    });\n\n    // Aggregate the data by requestor type\n    const data = filteredData.reduce((acc, requestor) => {\n        const key = requestor.requestor_type_name;\n        acc[key] = (acc[key] || 0) + 1; // Correct increment logic\n        return acc;\n    }, {});\n\n    console.log(data); // Log data to verify aggregation\n\n    // Convert aggregated data to array format for chart\n    const chartData = Object.entries(data).map(([requestorTypeName, count]) => ({\n        requestor_type_name: requestorTypeName,\n        count,\n        color: selectedRequestorTypeName === requestorTypeName \n            ? chart_color_palette.secondarylight \n            : chart_color_palette.secondarylight // Differentiate colors if needed\n    }));\n\n    return {\n        title: {\n            text: 'Requestors By Type',\n            left: 'center',\n            top: 'top',\n            textStyle: {\n                fontSize: 18,\n                fontWeight: 'bold'\n            }\n        },\n        grid: {\n            left: '20%',\n            right: '10%',\n            top: '10%',\n            bottom: '15%'\n        },\n        xAxis: {\n            type: 'value'\n        },\n        yAxis: {\n            type: 'category',\n            data: chartData.map(item => item.requestor_type_name),\n            axisLabel: {\n                formatter: function(value) {\n                    const maxLength = 20; // Number of characters per line\n                    const words = value.split(' '); // Split by spaces\n                    let line = '';\n                    let result = '';\n\n                    words.forEach(word => {\n                        if ((line + word).length > maxLength) {\n                            result += line.trim() + '\\n'; // Add line break\n                            line = word; // Start a new line\n                        } else {\n                            line += (line.length === 0 ? '' : ' ') + word; // Add word to current line\n                        }\n                    });\n\n                    result += line.trim(); // Add the last line\n                    return result;\n                }\n            }\n        },\n        series: [\n            {\n                type: 'bar',\n                data: chartData.map(item => ({\n                    value: item.count,\n                    itemStyle: {\n                        color: item.color,\n                        opacity: selectedRequestorTypeName && selectedRequestorTypeName !== item.requestor_type_name ? 0.2 : 1\n                    }\n                })),\n                label: {\n                    show: true,\n                    position: 'right',\n                    formatter: '{c}',\n                    fontSize: 12\n                }\n            }\n        ],\n        tooltip: {\n            trigger: 'axis',\n            axisPointer: {\n                type: 'shadow'\n            }\n        }\n    };\n})()\n))(requestor_type_chart.chartType) }}",
+  "customEChartConfig": "{{ ((chartType) => ( (() => {\n    // Retrieve selected filter values\n    const { selectedRequestorTypeName, chart_color_palette } = requestor_utils.getFilters();\n\n    // Filter the dataset based on selected filters\n    const filteredData = requestor_utils.filterDataPoints({\n        data: requestordataset_tnl.data,\n        filterTypes: '*',\n        excludeTypes: ['ByRequestorType']\n    });\n\n    // Aggregate the data by requestor type\n    const data = filteredData.reduce((acc, requestor) => {\n        const key = requestor.requestor_type_name;\n        acc[key] = (acc[key] || 0) + 1; // Correct increment logic\n        return acc; // Ensure return of accumulated result\n    }, {});\n\n    console.log(data); // Log data to verify aggregation\n\n    // Convert aggregated data to array format for chart\n    const chartData = Object.entries(data).map(([requestorTypeName, count]) => ({\n        requestor_type_name: requestorTypeName,\n        count,\n        color: selectedRequestorTypeName === requestorTypeName \n            ? chart_color_palette.secondarylight \n            : chart_color_palette.secondarylight // Differentiate colors if needed\n    }));\n\n    return {\n        title: {\n            text: 'Requestors By Type',\n            left: 'center',\n            top: 'top',\n            textStyle: {\n                fontSize: 18,\n                fontWeight: 'bold'\n            }\n        },\n        grid: {\n            left: '20%',\n            right: '10%',\n            top: '10%',\n            bottom: '15%'\n        },\n        xAxis: {\n            type: 'value'\n        },\n        yAxis: {\n            type: 'category',\n            data: chartData.map(item => item.requestor_type_name),\n            axisLabel: {\n                formatter: function(value) {\n                    const maxLength = 20; // Number of characters per line\n                    const words = value.split(' '); // Split by spaces\n                    let line = '';\n                    let result = '';\n\n                    words.forEach(word => {\n                        if ((line + word).length > maxLength) {\n                            result += line.trim() + '\\n'; // Add line break\n                            line = word; // Start a new line\n                        } else {\n                            line += (line.length === 0 ? '' : ' ') + word; // Add word to current line\n                        }\n                    });\n\n                    result += line.trim(); // Add the last line\n                    return result;\n                }\n            }\n        },\n        series: [\n            {\n                type: 'bar',\n                data: chartData.map(item => ({\n                    value: item.count,\n                    itemStyle: {\n                        color: item.color,\n                        opacity: selectedRequestorTypeName && selectedRequestorTypeName !== item.requestor_type_name ? 0.2 : 1\n                    }\n                })),\n                label: {\n                    show: true,\n                    position: 'right',\n                    formatter: '{c}',\n                    fontSize: 12\n                }\n            }\n        ],\n        tooltip: {\n            trigger: 'axis',\n            axisPointer: {\n                type: 'shadow'\n            }\n        }\n    };\n})()\n))(requestor_type_chart.chartType) }}",
   "customFusionChartConfig": {
     "dataSource": {
       "chart": {
@@ -109,10 +109,10 @@
   "labelOrientation": "auto",
   "leftColumn": 32,
   "minWidth": 450,
-  "mobileBottomRow": 177.78125000000017,
+  "mobileBottomRow": 134.43906250000032,
   "mobileLeftColumn": 0,
   "mobileRightColumn": 64,
-  "mobileTopRow": 145.7812500000001,
+  "mobileTopRow": 102.43906250000006,
   "onDataPointClick": "{{JSObject2.myFun1();\ntotal_data_counts.myFun1();}}",
   "parentColumnSpace": 11.890625,
   "parentId": "zjg87kjyes",
@@ -129,7 +129,7 @@
   "tags": [
     "Display"
   ],
-  "topRow": 20.1984375,
+  "topRow": 20.2,
   "type": "CHART_WIDGET",
   "version": 1,
   "widgetId": "m0t7ffdi9u",
