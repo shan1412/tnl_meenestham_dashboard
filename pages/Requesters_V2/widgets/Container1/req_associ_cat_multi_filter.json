@@ -47,10 +47,10 @@
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 46.639062499999994,
+  "mobileBottomRow": 65.6,
   "mobileLeftColumn": 0,
   "mobileRightColumn": 64,
-  "mobileTopRow": 40.03906249999999,
+  "mobileTopRow": 58.99999999999999,
   "onOptionChange": "{{storeValue('req_associ_cat_selected_values', req_associ_cat_multi_filter.selectedOptionLabels);\ntotal_data_counts.myFun1();}}",
   "optionLabel": "name",
   "optionValue": "code",
@@ -70,7 +70,7 @@
   "tags": [
     "Select"
   ],
-  "topRow": 12.399999999999999,
+  "topRow": 12.4,
   "type": "MULTI_SELECT_WIDGET_V2",
   "version": 1,
   "widgetId": "h8mrcl613t",

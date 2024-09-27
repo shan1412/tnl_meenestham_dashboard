@@ -44,7 +44,7 @@
   "labelText": "Villages",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 39.96652719665272,
+  "leftColumn": 44.98587127158556,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -61,7 +61,7 @@
   "placeholderText": "Select option(s)",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 53.28870292887029,
+  "rightColumn": 59.98116169544741,
   "searchTags": [
     "dropdown",
     "tags"

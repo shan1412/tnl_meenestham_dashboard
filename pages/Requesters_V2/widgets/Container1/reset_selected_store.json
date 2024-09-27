@@ -28,10 +28,10 @@
   "key": "reaxjkd1og",
   "leftColumn": 58.39824945295405,
   "minWidth": 50,
-  "mobileBottomRow": 67.03906249999997,
-  "mobileLeftColumn": 64,
-  "mobileRightColumn": -19.02702702702703,
-  "mobileTopRow": 62.23906249999997,
+  "mobileBottomRow": 93.39999999999996,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 2.800875273522976,
+  "mobileTopRow": 88.59999999999995,
   "onClick": "{{requesters_reset_button.myFun1();\ntotal_data_counts.myFun1();}}",
   "parentColumnSpace": 13.953125,
   "parentId": "zjg87kjyes",
@@ -46,7 +46,7 @@
   "tags": [
     "Buttons"
   ],
-  "topRow": 12.399999999999999,
+  "topRow": 12.4,
   "type": "ICON_BUTTON_WIDGET",
   "version": 1,
   "widgetId": "px2o4q9j91",

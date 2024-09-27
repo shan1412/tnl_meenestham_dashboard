@@ -48,10 +48,10 @@
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 39.239062499999996,
+  "mobileBottomRow": 58.199999999999996,
   "mobileLeftColumn": 0,
   "mobileRightColumn": 64,
-  "mobileTopRow": 32.639062499999994,
+  "mobileTopRow": 51.599999999999994,
   "onOptionChange": "{{storeValue('req_indv_cat_selected_values', req_indv_cat_multi_filter.selectedOptionLabels);\ntotal_data_counts.myFun1();}}",
   "optionLabel": "name",
   "optionValue": "code",
@@ -71,7 +71,7 @@
   "tags": [
     "Select"
   ],
-  "topRow": 12.399999999999999,
+  "topRow": 12.4,
   "type": "MULTI_SELECT_WIDGET_V2",
   "version": 1,
   "widgetId": "ysgi9fignp",

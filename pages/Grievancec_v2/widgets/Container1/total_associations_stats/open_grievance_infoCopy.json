@@ -40,7 +40,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 54.51851851851852,
+  "rightColumn": 55.70178282009724,
   "shouldTruncate": false,
   "text": "Meenestham : {{total_closed_grivevances__coun.myFun1.data['sourceAggregation']['Meenestham']}}\t\t\t\t\t    \nPGRS : {{total_closed_grivevances__coun.myFun1.data['sourceAggregation']['PGRS']}}",
   "textAlign": "LEFT",

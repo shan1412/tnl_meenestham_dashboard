@@ -43,7 +43,7 @@
   "labelText": "Mandal",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 26.644351464435147,
+  "leftColumn": 29.990580847723706,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -60,7 +60,7 @@
   "placeholderText": "Select option(s)",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 39.96652719665272,
+  "rightColumn": 44.98587127158556,
   "searchTags": [
     "dropdown",
     "tags"
