@@ -83,9 +83,10 @@
     "created_on_month",
     "created_on_year",
     "created_on_month_year",
+    "is_registered_as_voter",
     "requestor_grievances"
   ],
-  "columnUpdatedAt": 1726665793146,
+  "columnUpdatedAt": 1727443054546,
   "columnWidthMap": {
     "customColumn1": 82,
     "requestor_grievances": 284
@@ -265,6 +266,9 @@
     },
     {
       "key": "primaryColumns.requestor_grievances.computedValue"
+    },
+    {
+      "key": "primaryColumns.is_registered_as_voter.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -1071,6 +1075,40 @@
       "label": "is_active",
       "notation": "standard",
       "originalId": "is_active",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "is_registered_as_voter": {
+      "alias": "is_registered_as_voter",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"is_registered_as_voter\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "is_registered_as_voter",
+      "index": 33,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "is_registered_as_voter",
+      "notation": "standard",
+      "originalId": "is_registered_as_voter",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
