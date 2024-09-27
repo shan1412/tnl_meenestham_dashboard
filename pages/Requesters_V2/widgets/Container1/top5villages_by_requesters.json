@@ -4,7 +4,7 @@
   "allowScroll": false,
   "animateLoading": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 151.79999999999978,
+  "bottomRow": 156.99999999999977,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "chartData": {
     "5zz1dwyawa": {
@@ -109,10 +109,10 @@
   "labelOrientation": "auto",
   "leftColumn": 0,
   "minWidth": 450,
-  "mobileBottomRow": 323.0000000000009,
+  "mobileBottomRow": 327.8000000000009,
   "mobileLeftColumn": 0,
   "mobileRightColumn": 64,
-  "mobileTopRow": 291.0000000000009,
+  "mobileTopRow": 295.8000000000009,
   "onDataPointClick": "{{request_by_village_store.myFun1();}}",
   "parentColumnSpace": 11.890625,
   "parentId": "zjg87kjyes",
@@ -129,7 +129,7 @@
   "tags": [
     "Display"
   ],
-  "topRow": 119.79999999999984,
+  "topRow": 124.99999999999986,
   "type": "CHART_WIDGET",
   "version": 1,
   "widgetId": "rg8zfuoein",

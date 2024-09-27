@@ -2,7 +2,7 @@
   "alignment": "start",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 9.359375,
+  "bottomRow": 9.996875000000001,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -45,7 +45,7 @@
   "text": "Meenestham: {{ average_ticket_time.myFun1.data.sourceAggregation?.Meenestham?.avgAge || ' ' }}\nPGRS: {{ average_ticket_time.myFun1.data.sourceAggregation?.PGRS?.avgAge || ' ' }}\n",
   "textAlign": "LEFT",
   "textColor": "#999999",
-  "topRow": 5.2,
+  "topRow": 5.8375,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

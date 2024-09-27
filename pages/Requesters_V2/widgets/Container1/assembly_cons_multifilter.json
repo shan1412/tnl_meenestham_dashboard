@@ -50,7 +50,7 @@
   "mobileBottomRow": 72.99999999999997,
   "mobileLeftColumn": 0,
   "mobileRightColumn": 64,
-  "mobileTopRow": 66.39999999999998,
+  "mobileTopRow": 66.39999999999999,
   "onOptionChange": "{{storeValue('req_assembly_constituency_selected_names', assembly_cons_multifilter.selectedOptionLabels);\ntotal_data_counts.myFun1();}}",
   "optionLabel": "name",
   "optionValue": "code",

@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "66f68c3bce77550208297f72_d0b0890f-c573-4d0d-b58a-aa0a8459b5d1",
+  "id": "Requesters_V2_lst_refresh",
+  "unpublishedCollection": {
+    "name": "lst_refresh",
+    "pageId": "Requesters_V2",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}
