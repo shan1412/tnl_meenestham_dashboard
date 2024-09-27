@@ -34,7 +34,7 @@ export default {
       (selected_grievance_mandal.length === 0 || selected_grievance_mandal.includes(req.grievance_type)) &&
       (selected_grievance_village.length === 0 || selected_grievance_village.includes(req.request_village)) 
     );
-
+		console.log(filteredData)
     // Get the count of filtered grievances
     const grievanceCount = filteredData.length;
 
