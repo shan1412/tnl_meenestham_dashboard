@@ -2094,7 +2094,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "searchKey": "",
-  "tableData": "{{    party_cader_utils.filterDataPoints({\n        data: party_cader_dataset.data,\n        filterTypes: '*',\n        excludeTypes: [] // Exclude the grievanceName field\n    });}}",
+  "tableData": "{{    party_cader_utils.filterDataPoints({\n        data: party_cader_dataset_tnl.data,\n        filterTypes: '*',\n        excludeTypes: [] // Exclude the grievanceName field\n    });}}",
   "textSize": "0.875rem",
   "topRow": 5.2,
   "totalRecordsCount": 0,

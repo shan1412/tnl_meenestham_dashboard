@@ -23,7 +23,7 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "name": "party_cader_dataset",
     "pageId": "Party_cader_v2",
     "userSetOnLoad": false
