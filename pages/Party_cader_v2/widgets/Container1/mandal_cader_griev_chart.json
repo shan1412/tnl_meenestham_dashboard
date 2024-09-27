@@ -4,7 +4,7 @@
   "allowScroll": false,
   "animateLoading": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 105.60000000000004,
+  "bottomRow": 121.60000000000001,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "chartData": {
     "yx2af5g6n1": {
@@ -118,12 +118,12 @@
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "showDataPointLabel": false,
-  "topRow": 75.60000000000004,
+  "topRow": 85.60000000000001,
   "type": "CHART_WIDGET",
   "version": 1,
   "widgetId": "l9esbf5q6x",
   "widgetName": "mandal_cader_griev_chart",
-  "widthInPercentage": 0.9750240153698367,
+  "widthInPercentage": 0.946058091286307,
   "xAxisName": "Product Line",
   "yAxisName": "Revenue($)"
 }

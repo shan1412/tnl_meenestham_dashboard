@@ -4,7 +4,7 @@
   "allowScroll": false,
   "animateLoading": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 136.80000000000007,
+  "bottomRow": 157.8,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "chartData": {
     "ea298t0py7": {
@@ -118,12 +118,12 @@
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "showDataPointLabel": false,
-  "topRow": 106.80000000000004,
+  "topRow": 122.80000000000001,
   "type": "CHART_WIDGET",
   "version": 1,
   "widgetId": "gi9p9m0b9v",
   "widgetName": "village_cader_griev_chart",
-  "widthInPercentage": 0.9750240153698367,
+  "widthInPercentage": 0.946058091286307,
   "xAxisName": "Product Line",
   "yAxisName": "Revenue($)"
 }

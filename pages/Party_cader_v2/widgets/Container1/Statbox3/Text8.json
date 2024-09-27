@@ -38,7 +38,7 @@
   "parentId": "wzeukyjwdj",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 54.51851851851851,
+  "rightColumn": 54.51851851851852,
   "shouldTruncate": false,
   "text": "{{cader_cards_stats.getCardData.data['closedGrievances']}}",
   "textAlign": "LEFT",

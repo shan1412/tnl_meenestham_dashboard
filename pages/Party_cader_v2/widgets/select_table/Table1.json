@@ -1690,7 +1690,7 @@
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "columnType": "url",
-      "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( 'https://dev.meenestham.in/request/view/'+currentRow.requestor_grievances))}}",
+      "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( 'https://dev-tnl.meenestham.in/request/view/currentRow.requestor_grievance'))}}",
       "currencyCode": "USD",
       "decimals": 0,
       "displayText": "View",

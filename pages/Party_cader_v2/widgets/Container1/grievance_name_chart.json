@@ -4,7 +4,7 @@
   "allowScroll": false,
   "animateLoading": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 168.00000000000006,
+  "bottomRow": 198,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "chartData": {
     "7kd2qice8q": {
@@ -118,12 +118,12 @@
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "showDataPointLabel": false,
-  "topRow": 138.00000000000006,
+  "topRow": 159,
   "type": "CHART_WIDGET",
   "version": 1,
   "widgetId": "2rd5cend3i",
   "widgetName": "grievance_name_chart",
-  "widthInPercentage": 0.9750240153698367,
+  "widthInPercentage": 0.946058091286307,
   "xAxisName": "Product Line",
   "yAxisName": "Revenue($)"
 }

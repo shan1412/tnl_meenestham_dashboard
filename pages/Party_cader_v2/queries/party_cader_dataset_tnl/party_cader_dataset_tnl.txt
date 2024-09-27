@@ -57,138 +57,139 @@ SELECT
     TO_CHAR(created_on, 'YYYY-MM-DD') AS formatted_created_on
 FROM
     (
-        SELECT
-            a."ID",
-            client_key,
-            lang,
-            photo,
-            requestor_type,
-            requestor_type_name,
-            "name",
-            registration_number,
-            "Age",
-            age_group,
-            gender,
-            requestor_contact,
-            requestor_alternate_contact,
-            mobile,
-            email,
-            occupation_id,
-            occupation,
-            constituency_type,
-            constituency_key,
-            constituency_name,
-            state_key,
-            state,
-            district_key,
-            district,
-            mandal_key,
-            mandal,
-            village_key,
-            village,
-            door_flat_no,
-            pin_code,
-            address_line1,
-            address_line2,
-            voter_id,
-            relation_type,
-            relation_name,
-            relation_contact,
-            relation_alternate_contact,
-            tags::text,
-            requestor_grievance_info::text,
-            requestor_grievances,
-            array_textdistinct(string_to_array(string_agg(gi."GrievanceTypeName"::text, ','::text), ','::text)) AS requestor_grievances_name,
-            array_textdistinct(string_to_array(string_agg(gi."GrievanceType"::text, ','::text), ','::text)) AS requestor_grievances_name_key,
-            requestor_reference_type,
-            requestor_reference_relation,
-            additional_info,
-            members::text,
-            is_active,
-            created_by,
-            created_user_name,
-            created_on,
-            created_on_month,
-            created_on_year,
-            created_on_month_year,
-            CASE
-                WHEN constituency_key = 0 AND state_key = 0 AND district_key = 0 AND mandal_key = 0 AND village_key = 0 THEN 'Not-Relevant (Any Location)'
-                WHEN constituency_key != 0 AND state_key = 0 AND district_key = 0 AND mandal_key = 0 AND village_key = 0 THEN 'AC'
-                WHEN constituency_key != 0 AND state_key != 0 AND district_key = 0 AND mandal_key = 0 AND village_key = 0 THEN 'State'
-                WHEN constituency_key != 0 AND state_key != 0 AND district_key != 0 AND mandal_key = 0 AND village_key = 0 THEN 'Distrit'
-                WHEN constituency_key != 0 AND state_key != 0 AND district_key != 0 AND mandal_key != 0 AND village_key = 0 THEN 'Mandal'
-                WHEN constituency_key != 0 AND state_key != 0 AND district_key != 0 AND mandal_key != 0 AND village_key != 0 THEN 'Village'
-                WHEN constituency_key != 0 AND state_key = 0 AND district_key = 0 AND mandal_key = 0 AND village_key = 0 THEN 'Not-Relevant (Any Location)'
-                WHEN constituency_key = 0 AND state_key = 0 AND district_key = 0 AND mandal_key = 0 AND village_key = 0 THEN 'AC'
-                WHEN constituency_key = 0 AND state_key != 0 AND district_key = 0 AND mandal_key = 0 AND village_key = 0 THEN 'State'
-                WHEN constituency_key = 0 AND state_key != 0 AND district_key != 0 AND mandal_key = 0 AND village_key = 0 THEN 'Distrit'
-                WHEN constituency_key = 0 AND state_key != 0 AND district_key != 0 AND mandal_key != 0 AND village_key = 0 THEN 'Mandal'
-                WHEN constituency_key = 0 AND state_key != 0 AND district_key != 0 AND mandal_key != 0 AND village_key != 0 THEN 'Village'
-                WHEN constituency_key IS NULL AND state_key = 0 AND district_key = 0 AND mandal_key = 0 AND village_key = 0 THEN 'Not-Relevant (Any Location)'
-                WHEN constituency_key IS NULL AND state_key = 0 AND district_key = 0 AND mandal_key = 0 AND village_key = 0 THEN 'AC'
-                WHEN constituency_key IS NULL AND state_key != 0 AND district_key = 0 AND mandal_key = 0 AND village_key = 0 THEN 'State'
-                WHEN constituency_key IS NULL AND state_key != 0 AND district_key != 0 AND mandal_key = 0 AND village_key = 0 THEN 'Distrit'
-                WHEN constituency_key IS NULL AND state_key != 0 AND district_key != 0 AND mandal_key != 0 AND village_key = 0 THEN 'Mandal'
-                WHEN constituency_key IS NULL AND state_key != 0 AND district_key != 0 AND mandal_key != 0 AND village_key != 0 THEN 'Village'
-            END "LocationGranularity"
-        FROM
-            hubviews.vw_requestordataset a
-        JOIN connecthub."GrievanceInfo" gi ON
-            gi."GrievanceKey" = ANY(a.requestor_grievances)
-        WHERE
-            'Party Cadre' = ANY(Tags)
-            AND ARRAY_LENGTH(requestor_grievances, 1) <> 0
-            AND "ClientKey" = {{appsmith.URL.queryParams.client_key	}}
-        GROUP BY
-            a."ID",
-            client_key,
-            lang,
-            photo,
-            requestor_type,
-            requestor_type_name,
-            "name",
-            registration_number,
-            "Age",
-            age_group,
-            gender,
-            requestor_contact,
-            requestor_alternate_contact,
-            mobile,
-            email,
-            occupation_id,
-            occupation,
-            constituency_type,
-            constituency_key,
-            constituency_name,
-            state_key,
-            state,
-            district_key,
-            district,
-            mandal_key,
-            mandal,
-            village_key,
-            village,
-            door_flat_no,
-            pin_code,
-            address_line1,
-            address_line2,
-            voter_id,
-            relation_type,
-            relation_name,
-            relation_contact,
-            relation_alternate_contact,
-            tags::text,
-            requestor_grievance_info::text,
-            requestor_grievances,
-            requestor_reference_type,
-            requestor_reference_relation,
-            additional_info,
-            members::text,
-            is_active,
-            created_by,
-            created_user_name,
-            created_on,
-            created_on_month,
-            created_on_year,
-            created_on_month_year
-    ) a;
+			SELECT
+			a."ID",
+			client_key,
+			lang,
+			photo,
+			requestor_type,
+			requestor_type_name,
+			"name",
+			registration_number,
+			"Age",
+			age_group,
+			gender,
+			requestor_contact,
+			requestor_alternate_contact,
+			mobile,
+			email,
+			occupation_id,
+			occupation,
+			constituency_type,
+			constituency_key,
+			constituency_name,
+			state_key,
+			state,
+			district_key,
+			district,
+			mandal_key,
+			mandal,
+			village_key,
+			village,
+			door_flat_no,
+			pin_code,
+			address_line1,
+			address_line2,
+			voter_id,
+			relation_type,
+			relation_name,
+			relation_contact,
+			relation_alternate_contact,
+			tags::text,
+			requestor_grievance_info::text,
+			requestor_grievances,
+			array_textdistinct(string_to_array(string_agg(gi."GrievanceTypeName"::text, ','::text), ','::text)) AS requestor_grievances_name,
+			array_textdistinct(string_to_array(string_agg(gi."GrievanceType"::text, ','::text), ','::text)) AS requestor_grievances_name_key,
+			requestor_reference_type,
+			requestor_reference_relation,
+			additional_info,
+			members::text,
+			is_active,
+			created_by,
+			created_user_name,
+			created_on,
+			created_on_month,
+			created_on_year,
+			created_on_month_year,
+			CASE
+			WHEN constituency_key = 0 AND state_key = 0 AND district_key = 0 AND mandal_key = 0 AND village_key = 0 THEN 'Not-Relevant (Any Location)'
+			WHEN constituency_key != 0 AND state_key = 0 AND district_key = 0 AND mandal_key = 0 AND village_key = 0 THEN 'AC'
+			WHEN constituency_key != 0 AND state_key != 0 AND district_key = 0 AND mandal_key = 0 AND village_key = 0 THEN 'State'
+			WHEN constituency_key != 0 AND state_key != 0 AND district_key != 0 AND mandal_key = 0 AND village_key = 0 THEN 'Distrit'
+			WHEN constituency_key != 0 AND state_key != 0 AND district_key != 0 AND mandal_key != 0 AND village_key = 0 THEN 'Mandal'
+			WHEN constituency_key != 0 AND state_key != 0 AND district_key != 0 AND mandal_key != 0 AND village_key != 0 THEN 'Village'
+			WHEN constituency_key != 0 AND state_key = 0 AND district_key = 0 AND mandal_key = 0 AND village_key = 0 THEN 'Not-Relevant (Any Location)'
+			WHEN constituency_key = 0 AND state_key = 0 AND district_key = 0 AND mandal_key = 0 AND village_key = 0 THEN 'AC'
+			WHEN constituency_key = 0 AND state_key != 0 AND district_key = 0 AND mandal_key = 0 AND village_key = 0 THEN 'State'
+			WHEN constituency_key = 0 AND state_key != 0 AND district_key != 0 AND mandal_key = 0 AND village_key = 0 THEN 'Distrit'
+			WHEN constituency_key = 0 AND state_key != 0 AND district_key != 0 AND mandal_key != 0 AND village_key = 0 THEN 'Mandal'
+			WHEN constituency_key = 0 AND state_key != 0 AND district_key != 0 AND mandal_key != 0 AND village_key != 0 THEN 'Village'
+			WHEN constituency_key IS NULL AND state_key = 0 AND district_key = 0 AND mandal_key = 0 AND village_key = 0 THEN 'Not-Relevant (Any Location)'
+			WHEN constituency_key IS NULL AND state_key = 0 AND district_key = 0 AND mandal_key = 0 AND village_key = 0 THEN 'AC'
+			WHEN constituency_key IS NULL AND state_key != 0 AND district_key = 0 AND mandal_key = 0 AND village_key = 0 THEN 'State'
+			WHEN constituency_key IS NULL AND state_key != 0 AND district_key != 0 AND mandal_key = 0 AND village_key = 0 THEN 'Distrit'
+			WHEN constituency_key IS NULL AND state_key != 0 AND district_key != 0 AND mandal_key != 0 AND village_key = 0 THEN 'Mandal'
+			WHEN constituency_key IS NULL AND state_key != 0 AND district_key != 0 AND mandal_key != 0 AND village_key != 0 THEN 'Village'
+			END "LocationGranularity"
+			FROM
+			hubviews.vw_requestordataset a
+			JOIN connecthub."GrievanceInfo" gi ON
+			gi."GrievanceKey" = ANY(a.requestor_grievances)
+			WHERE
+			'Party Cadre' = ANY(Tags)
+			AND ARRAY_LENGTH(requestor_grievances, 1) <> 0
+			AND "ClientKey" = {{appsmith.URL.queryParams.client_key	}}
+			AND a.constituency_key = {{ui_elements_tnl.data[0]['ACKey']}}
+			GROUP BY
+			a."ID",
+			client_key,
+			lang,
+			photo,
+			requestor_type,
+			requestor_type_name,
+			"name",
+			registration_number,
+			"Age",
+			age_group,
+			gender,
+			requestor_contact,
+			requestor_alternate_contact,
+			mobile,
+			email,
+			occupation_id,
+			occupation,
+			constituency_type,
+			constituency_key,
+			constituency_name,
+			state_key,
+			state,
+			district_key,
+			district,
+			mandal_key,
+			mandal,
+			village_key,
+			village,
+			door_flat_no,
+			pin_code,
+			address_line1,
+			address_line2,
+			voter_id,
+			relation_type,
+			relation_name,
+			relation_contact,
+			relation_alternate_contact,
+			tags::text,
+			requestor_grievance_info::text,
+			requestor_grievances,
+			requestor_reference_type,
+			requestor_reference_relation,
+			additional_info,
+			members::text,
+			is_active,
+			created_by,
+			created_user_name,
+			created_on,
+			created_on_month,
+			created_on_year,
+			created_on_month_year
+		) a;
