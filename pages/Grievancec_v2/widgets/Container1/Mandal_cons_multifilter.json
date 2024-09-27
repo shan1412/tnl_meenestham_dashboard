@@ -3,7 +3,7 @@
   "alignment": "start",
   "animateLoading": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 19.796875,
+  "bottomRow": 19.159374999999997,
   "boxShadow": "none",
   "defaultOptionValue": "",
   "displayName": "MultiSelect",
@@ -43,7 +43,7 @@
   "labelText": "Mandal",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 44.91228070175438,
+  "leftColumn": 30.11764705882353,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -60,7 +60,7 @@
   "placeholderText": "Select option(s)",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 67.36842105263158,
+  "rightColumn": 45.17647058823529,
   "searchTags": [
     "dropdown",
     "tags"
@@ -70,7 +70,7 @@
   "tags": [
     "Select"
   ],
-  "topRow": 13.196874999999999,
+  "topRow": 12.559375,
   "type": "MULTI_SELECT_WIDGET_V2",
   "version": 1,
   "widgetId": "0g49nfrusx",

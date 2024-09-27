@@ -4,7 +4,7 @@
   "allowScroll": false,
   "animateLoading": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 212.1968750000001,
+  "bottomRow": 243.5593750000001,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "chartData": {
     "5zz1dwyawa": {
@@ -129,12 +129,12 @@
   "tags": [
     "Display"
   ],
-  "topRow": 182.1968750000001,
+  "topRow": 208.5593750000001,
   "type": "CHART_WIDGET",
   "version": 1,
   "widgetId": "pkexjlkzv5",
   "widgetName": "grievances_village_wise_chart",
-  "widthInPercentage": 0.9717083786724701,
+  "widthInPercentage": 0.9631728045325779,
   "xAxisName": "Product Line",
   "yAxisName": "Revenue($)"
 }

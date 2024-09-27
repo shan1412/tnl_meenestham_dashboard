@@ -4,7 +4,7 @@
   "allowScroll": false,
   "animateLoading": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 56.19687500000005,
+  "bottomRow": 57.559374999999996,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "chartData": {
     "n1qup7aps3": {
@@ -94,7 +94,7 @@
   "isVisible": true,
   "key": "9n76g7gd2u",
   "labelOrientation": "auto",
-  "leftColumn": 39.29824561403509,
+  "leftColumn": 32,
   "minWidth": 450,
   "mobileBottomRow": 174.73749999999944,
   "mobileLeftColumn": 0,
@@ -106,7 +106,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 78.59649122807018,
+  "rightColumn": 64,
   "searchTags": [
     "graph",
     "visuals",
@@ -116,12 +116,12 @@
   "tags": [
     "Display"
   ],
-  "topRow": 26.196875,
+  "topRow": 25.559374999999996,
   "type": "CHART_WIDGET",
   "version": 1,
   "widgetId": "qox9gk0t7p",
   "widgetName": "priority_chart",
-  "widthInPercentage": 0.3695539419087137,
+  "widthInPercentage": 0.48158640226628896,
   "xAxisName": "Product Line",
   "yAxisName": "Revenue($)"
 }

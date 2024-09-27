@@ -4,7 +4,7 @@
   "allowScroll": false,
   "animateLoading": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 180.9968750000001,
+  "bottomRow": 207.35937500000009,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "chartData": {
     "5zz1dwyawa": {
@@ -119,7 +119,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 39.29824561403509,
+  "rightColumn": 32,
   "searchTags": [
     "graph",
     "visuals",
@@ -129,12 +129,12 @@
   "tags": [
     "Display"
   ],
-  "topRow": 150.9968750000001,
+  "topRow": 171.35937500000009,
   "type": "CHART_WIDGET",
   "version": 1,
   "widgetId": "fw67ugs7au",
   "widgetName": "grievances_constit_wise_chart",
-  "widthInPercentage": "0.48585418933623503",
+  "widthInPercentage": 0.48158640226628896,
   "xAxisName": "Product Line",
   "yAxisName": "Revenue($)"
 }

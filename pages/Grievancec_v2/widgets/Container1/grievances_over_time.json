@@ -4,7 +4,7 @@
   "allowScroll": false,
   "animateLoading": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 118.59687500000005,
+  "bottomRow": 138.95937500000002,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "chartData": {
     "5zz1dwyawa": {
@@ -129,12 +129,12 @@
   "tags": [
     "Display"
   ],
-  "topRow": 88.59687500000005,
+  "topRow": 106.95937500000001,
   "type": "CHART_WIDGET",
   "version": 1,
   "widgetId": "br1ts68mf7",
   "widgetName": "grievances_over_time",
-  "widthInPercentage": "0.47689075630252103",
+  "widthInPercentage": 0.9631728045325779,
   "xAxisName": "Product Line",
   "yAxisName": "Revenue($)"
 }

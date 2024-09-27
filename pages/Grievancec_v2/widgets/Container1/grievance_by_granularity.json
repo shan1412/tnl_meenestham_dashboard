@@ -4,7 +4,7 @@
   "allowScroll": false,
   "animateLoading": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 56.19687500000005,
+  "bottomRow": 58.559374999999996,
   "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
   "chartData": {
     "n1qup7aps3": {
@@ -117,7 +117,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 39.29824561403509,
+  "rightColumn": 32,
   "searchTags": [
     "graph",
     "visuals",
@@ -127,12 +127,12 @@
   "tags": [
     "Display"
   ],
-  "topRow": 26.196875,
+  "topRow": 25.559374999999996,
   "type": "CHART_WIDGET",
   "version": 1,
   "widgetId": "0gzewtwg1o",
   "widgetName": "grievance_by_granularity",
-  "widthInPercentage": 0.5765041493775933,
+  "widthInPercentage": 0.48158640226628896,
   "xAxisName": "Product Line",
   "yAxisName": "Revenue($)"
 }
