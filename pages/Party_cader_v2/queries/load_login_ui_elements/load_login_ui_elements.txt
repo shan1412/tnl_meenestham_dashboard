@@ -1,9 +1,0 @@
-{
-    "global": {
-        "Lang": "en"
-    },
-    "requestURI": "Login",
-    "params": {
-        "PageKey": 0
-    }
-}

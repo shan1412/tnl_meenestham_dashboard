@@ -48,10 +48,10 @@
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 55.8,
+  "mobileBottomRow": 76.9953125,
   "mobileLeftColumn": 0,
   "mobileRightColumn": 64,
-  "mobileTopRow": 49.2,
+  "mobileTopRow": 70.3953125,
   "onOptionChange": "{{storeValue('req_indv_cat_selected_values', req_indv_cat_multi_filter.selectedOptionLabels);\ntotal_data_counts.myFun1();}}",
   "optionLabel": "name",
   "optionValue": "code",
@@ -61,13 +61,13 @@
   "placeholderText": "Select option(s)",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 32.611464968152866,
+  "rightColumn": 15.058823529411764,
   "searchTags": [
     "dropdown",
     "tags"
   ],
   "serverSideFiltering": false,
-  "sourceData": "{{(() => {\n\n  // Filter the dataset based on selected filters\n  const filteredData = requestor_utils.filterDataPoints({\n    data: requestordataset_dev.data,\n    filterTypes: '*',\n    excludeTypes: ['IndvCats']\n  });\n\n\n  // Get unique requestor types\n  const indiv_cat = _.uniqBy(\n    _.flatten(\n      filteredData.filter(req =>req.requestor_type_name !== 'Association').map(item => \n        item.tags\n          .filter(tag => tag && tag.trim() !== '' && tag !== 'None' && tag !== 'NA')  // Filter out unwanted tags\n          .map(tag => ({\n            name: tag,  // Get tag name\n            code: tag   // Set code to tag name for uniqueness\n          }))\n      )\n    ),\n    'code'  // Ensure uniqueness by 'code'\n  );\n\n  return indiv_cat;  // Return the result as a unique list of requestor types\n})()}}\n",
+  "sourceData": "{{(() => {\n\n  // Filter the dataset based on selected filters\n  const filteredData = requestor_utils.filterDataPoints({\n    data: requestordataset_tnl.data,\n    filterTypes: '*',\n    excludeTypes: ['IndvCats']\n  });\n\n\n  // Get unique requestor types\n  const indiv_cat = _.uniqBy(\n    _.flatten(\n      filteredData.filter(req =>req.requestor_type_name !== 'Association').map(item => \n        item.tags\n          .filter(tag => tag && tag.trim() !== '' && tag !== 'None' && tag !== 'NA')  // Filter out unwanted tags\n          .map(tag => ({\n            name: tag,  // Get tag name\n            code: tag   // Set code to tag name for uniqueness\n          }))\n      )\n    ),\n    'code'  // Ensure uniqueness by 'code'\n  );\n\n  return indiv_cat;  // Return the result as a unique list of requestor types\n})()}}\n",
   "tags": [
     "Select"
   ],

@@ -22,7 +22,7 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "fullyQualifiedName": "party_cader_utils.myFun1",
     "name": "myFun1",
     "pageId": "Party_cader_v2",

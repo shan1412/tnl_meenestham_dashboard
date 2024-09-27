@@ -2,18 +2,20 @@ export default {
     myVar1: [],
     myVar2: {},
     
-		myFun1() {
+    myFun1() {
         // Log the data from load_login_ui_elements
-        const data = load_login_ui_elements.data;
+        const data = ui_elements_tnl.data[0];
 
-        if (data && data.Data && data.Data.Palette) {
-            const color_palette = data.Data.Palette; // Correctly retrieve color_palette
+        if (data && data.Theme && data.Palette) {
+            const color_palette = data.Palette; // Correctly retrieve color_palette
+            console.log(color_palette);
             return color_palette; // Return the palette data
         } else {
             console.warn("Palette data is not available");
             return null; // Return null if palette data is not available
         }
     },
+
     filterDataPoints({ data = [], filterTypes = [], excludeTypes = [] } = {}) {
         // Get current filter settings
         const {
@@ -58,7 +60,8 @@ export default {
             selectedCaderVillage: appsmith.store.cader_village || '',
             selectedCaderMandal: appsmith.store.cader_mandal || '',
             selectedTimeLine: appsmith.store.date_of_grievance_reg || '',
-            selectedGrievanceName: appsmith.store.grievance_type || ''
+            selectedGrievanceName: appsmith.store.grievance_type || '',
+            chart_color_palette: this.myFun1() // Call myFun1 to get color_palette
         };
     }
     // Additional methods can be added here if necessary

@@ -43,14 +43,14 @@
   "labelText": "Association Categories",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 32.611464968152866,
+  "leftColumn": 15.058823529411764,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 63.19999999999999,
+  "mobileBottomRow": 84.39531249999999,
   "mobileLeftColumn": 0,
   "mobileRightColumn": 64,
-  "mobileTopRow": 56.599999999999994,
+  "mobileTopRow": 77.7953125,
   "onOptionChange": "{{storeValue('req_associ_cat_selected_values', req_associ_cat_multi_filter.selectedOptionLabels);\ntotal_data_counts.myFun1();}}",
   "optionLabel": "name",
   "optionValue": "code",
@@ -60,13 +60,13 @@
   "placeholderText": "Select option(s)",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 65.22292993630573,
+  "rightColumn": 30.11764705882353,
   "searchTags": [
     "dropdown",
     "tags"
   ],
   "serverSideFiltering": false,
-  "sourceData": "{{\n(() => {\n  // Filter the dataset based on selected filters\n  const filteredData = requestor_utils.filterDataPoints({\n    data: requestordataset_dev.data,\n    filterTypes: '*',\n    excludeTypes: ['AssociCats']\n  });\n  // Step 3: Create a unique list of requestor type names and codes from the filtered data\nconst association_cat = _.uniqBy(\n  _.flatten(\n    filteredData.filter(req =>req.requestor_type_name !== 'Individual').map(item => \n      item.tags\n        .filter(tag => tag && tag.trim() !== '' && tag !== 'None' && tag !== 'NA')  // Filter out unwanted tags\n        .map(tag => ({\n          name: tag,  // Get tag name\n          code: tag   // Set code to tag name for uniqueness\n        }))\n    )\n  ),\n  'code'  // Ensure uniqueness by 'code'\n);\n\n  return association_cat;  // Return the result as a unique list of requestor types\n})()\n}}\n",
+  "sourceData": "{{\n(() => {\n  // Filter the dataset based on selected filters\n  const filteredData = requestor_utils.filterDataPoints({\n    data: requestordataset_tnl.data,\n    filterTypes: '*',\n    excludeTypes: ['AssociCats']\n  });\n  // Step 3: Create a unique list of requestor type names and codes from the filtered data\nconst association_cat = _.uniqBy(\n  _.flatten(\n    filteredData.filter(req =>req.requestor_type_name !== 'Individual').map(item => \n      item.tags\n        .filter(tag => tag && tag.trim() !== '' && tag !== 'None' && tag !== 'NA')  // Filter out unwanted tags\n        .map(tag => ({\n          name: tag,  // Get tag name\n          code: tag   // Set code to tag name for uniqueness\n        }))\n    )\n  ),\n  'code'  // Ensure uniqueness by 'code'\n);\n\n  return association_cat;  // Return the result as a unique list of requestor types\n})()\n}}\n",
   "tags": [
     "Select"
   ],

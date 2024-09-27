@@ -4,12 +4,20 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 9.2,
   "boxShadow": "none",
-  "buttonColor": "#eec861",
+  "buttonColor": "{{party_cader_utils.myFun1.data.secondarylight}}\t",
   "buttonStyle": "PRIMARY",
   "buttonVariant": "PRIMARY",
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "buttonColor"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "buttonColor"
     }
   ],
   "dynamicTriggerPathList": [],
@@ -20,10 +28,10 @@
   "key": "pxu2drqk8l",
   "leftColumn": 54.51851851851851,
   "minWidth": 50,
-  "mobileBottomRow": 8.079687499999999,
-  "mobileLeftColumn": 129.36170212765956,
+  "mobileBottomRow": 30.7953125,
+  "mobileLeftColumn": 149.33333333333331,
   "mobileRightColumn": 63.999999999999986,
-  "mobileTopRow": 3.2796874999999996,
+  "mobileTopRow": 26.7953125,
   "needsErrorInfo": false,
   "parentId": "wzeukyjwdj",
   "renderMode": "CANVAS",

@@ -43,14 +43,14 @@
   "labelText": "Assembly Constituency",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 65.22292993630573,
+  "leftColumn": 30.11764705882353,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 70.59999999999998,
+  "mobileBottomRow": 91.7953125,
   "mobileLeftColumn": 0,
   "mobileRightColumn": 64,
-  "mobileTopRow": 63.999999999999986,
+  "mobileTopRow": 85.19531249999999,
   "onOptionChange": "{{storeValue('req_assembly_constituency_selected_names', assembly_cons_multifilter.selectedOptionLabels);\ntotal_data_counts.myFun1();}}",
   "optionLabel": "name",
   "optionValue": "code",
@@ -60,13 +60,13 @@
   "placeholderText": "Select option(s)",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 97.8343949044586,
+  "rightColumn": 45.17647058823529,
   "searchTags": [
     "dropdown",
     "tags"
   ],
   "serverSideFiltering": false,
-  "sourceData": "{{\n(() => {\n  // Filter the dataset based on selected filters\n  const filteredData = requestor_utils.filterDataPoints({\n    data: requestordataset_dev.data,\n    filterTypes: '*',\n    excludeTypes: ['AcNames']\n  });\n\n  // Step 3: Create a unique list of requestor type names and codes\nconst ac_dropdown =\n\t\t\t_.uniqBy(\n    filteredData.map(item => ({ \n      name: item.constituency_name,  // Get requestor type name\n      code: item.constituency_key   // Set code to requestor type name for constituency_name\n    })), \n    'code'  // Ensure uniqueness by 'code'\n  );\n\n  return ac_dropdown;  // Return the result as a unique list of requestor types\n})()\n}}\n",
+  "sourceData": "{{\n(() => {\n  // Filter the dataset based on selected filters\n  const filteredData = requestor_utils.filterDataPoints({\n    data: requestordataset_tnl.data,\n    filterTypes: '*',\n    excludeTypes: ['AcNames']\n  });\n\n  // Step 3: Create a unique list of requestor type names and codes\nconst ac_dropdown =\n\t\t\t_.uniqBy(\n    filteredData.map(item => ({ \n      name: item.constituency_name,  // Get requestor type name\n      code: item.constituency_key   // Set code to requestor type name for constituency_name\n    })), \n    'code'  // Ensure uniqueness by 'code'\n  );\n\n  return ac_dropdown;  // Return the result as a unique list of requestor types\n})()\n}}\n",
   "tags": [
     "Select"
   ],
