@@ -43,7 +43,7 @@
   "labelText": "Association Categories",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 33.03225806451613,
+  "leftColumn": 22.407002188183807,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -60,7 +60,7 @@
   "placeholderText": "Select option(s)",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 66.06451612903226,
+  "rightColumn": 44.81400437636761,
   "searchTags": [
     "dropdown",
     "tags"
