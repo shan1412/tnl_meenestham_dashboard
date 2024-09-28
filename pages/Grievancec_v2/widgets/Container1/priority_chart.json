@@ -94,7 +94,7 @@
   "isVisible": true,
   "key": "9n76g7gd2u",
   "labelOrientation": "auto",
-  "leftColumn": 39.29824561403509,
+  "leftColumn": 32,
   "minWidth": 450,
   "mobileBottomRow": 170.73749999999927,
   "mobileLeftColumn": 0,
@@ -106,7 +106,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 78.59649122807018,
+  "rightColumn": 64,
   "searchTags": [
     "graph",
     "visuals",
