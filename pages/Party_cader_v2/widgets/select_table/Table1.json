@@ -33,7 +33,6 @@
   },
   "columnOrder": [
     "customColumn1",
-    "ID",
     "client_key",
     "lang",
     "photo",
@@ -41,7 +40,6 @@
     "requestor_type_name",
     "name",
     "registration_number",
-    "Age",
     "age_group",
     "gender",
     "requestor_contact",
@@ -88,9 +86,11 @@
     "LocationGranularity",
     "formatted_created_on",
     "no_of_grievances",
+    "id",
+    "age",
     "requestor_grievances"
   ],
-  "columnUpdatedAt": 1726662129470,
+  "columnUpdatedAt": 1727691263882,
   "columnWidthMap": {
     "customColumn1": 88,
     "requestor_grievances_name": 261
@@ -115,9 +115,6 @@
       "key": "tableData"
     },
     {
-      "key": "primaryColumns.ID.computedValue"
-    },
-    {
       "key": "primaryColumns.client_key.computedValue"
     },
     {
@@ -137,9 +134,6 @@
     },
     {
       "key": "primaryColumns.registration_number.computedValue"
-    },
-    {
-      "key": "primaryColumns.Age.computedValue"
     },
     {
       "key": "primaryColumns.age_group.computedValue"
@@ -284,6 +278,12 @@
     },
     {
       "key": "primaryColumns.no_of_grievances.computedValue"
+    },
+    {
+      "key": "primaryColumns.id.computedValue"
+    },
+    {
+      "key": "primaryColumns.age.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -316,68 +316,6 @@
   "parentId": "awnbo6sarg",
   "parentRowSpace": 10,
   "primaryColumns": {
-    "Age": {
-      "alias": "Age",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "columnType": "text",
-      "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Age\"]))}}",
-      "currencyCode": "USD",
-      "decimals": 0,
-      "enableFilter": true,
-      "enableSort": true,
-      "horizontalAlignment": "LEFT",
-      "id": "Age",
-      "index": 8,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": false,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": true,
-      "label": "Age",
-      "notation": "standard",
-      "originalId": "Age",
-      "sticky": "",
-      "textSize": "0.875rem",
-      "thousandSeparator": true,
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 150
-    },
-    "ID": {
-      "alias": "ID",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "columnType": "number",
-      "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"ID\"]))}}",
-      "currencyCode": "USD",
-      "decimals": 0,
-      "enableFilter": true,
-      "enableSort": true,
-      "horizontalAlignment": "LEFT",
-      "id": "ID",
-      "index": 0,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": false,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": false,
-      "label": "ID",
-      "notation": "standard",
-      "originalId": "ID",
-      "sticky": "",
-      "textSize": "0.875rem",
-      "thousandSeparator": true,
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 150
-    },
     "LocationGranularity": {
       "alias": "LocationGranularity",
       "allowCellWrapping": false,
@@ -496,6 +434,40 @@
       "notation": "standard",
       "originalId": "address_line2",
       "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "age": {
+      "alias": "age",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"age\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "age",
+      "index": 8,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "age",
+      "notation": "standard",
+      "originalId": "age",
+      "sticky": "",
+      "textColor": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
@@ -1056,6 +1028,40 @@
       "notation": "standard",
       "originalId": "gender",
       "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "id": {
+      "alias": "id",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "number",
+      "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "id",
+      "index": 0,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "id",
+      "notation": "standard",
+      "originalId": "id",
+      "sticky": "",
+      "textColor": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
@@ -1690,7 +1696,7 @@
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "columnType": "url",
-      "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( 'https://dev-tnl.meenestham.in/request/view/currentRow.requestor_grievance'))}}",
+      "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( 'https://tnl.meenestham.in/request/view/currentRow.requestor_grievance'))}}",
       "currencyCode": "USD",
       "decimals": 0,
       "displayText": "View",
