@@ -133,7 +133,7 @@
       "minDynamicHeight": 4,
       "minHeight": 140,
       "minWidth": 450,
-      "mobileBottomRow": 158.59375,
+      "mobileBottomRow": 158.59374999999997,
       "mobileLeftColumn": 0,
       "mobileRightColumn": 64,
       "mobileTopRow": 0,
@@ -171,7 +171,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "esogapiosz",
-  "leftColumn": 52.705882352941174,
+  "leftColumn": 117.12418300653594,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 14,
   "mobileBottomRow": 49.178124999999994,
@@ -184,7 +184,7 @@
   "positioning": "fixed",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 79.05882352941177,
+  "rightColumn": 175.68627450980392,
   "searchTags": [
     "statbox"
   ],

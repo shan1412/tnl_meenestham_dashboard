@@ -26,11 +26,11 @@
   "isLoading": false,
   "isVisible": true,
   "key": "reaxjkd1og",
-  "leftColumn": 60.23529411764706,
+  "leftColumn": 133.8562091503268,
   "minWidth": 50,
-  "mobileBottomRow": 100.33750000000003,
+  "mobileBottomRow": 100.3375,
   "mobileLeftColumn": 0,
-  "mobileRightColumn": 8.590604026845638,
+  "mobileRightColumn": 8.366013071895425,
   "mobileTopRow": 96.23750000000001,
   "onClick": "{{reset_button.myFun1();\ntotal_grievances_count.myFun1();\ntotal_open_grievances_count.myFun1();\ntotal_closed_grivevances__coun.myFun1();\naverage_ticket_time.myFun1();}}",
   "parentColumnSpace": 13.953125,
@@ -38,7 +38,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "hug",
-  "rightColumn": 64,
+  "rightColumn": 142.22222222222223,
   "searchTags": [
     "click",
     "submit"
