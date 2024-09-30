@@ -26,7 +26,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "reaxjkd1og",
-  "leftColumn": 133.8562091503268,
+  "leftColumn": 60.23529411764706,
   "minWidth": 50,
   "mobileBottomRow": 100.3375,
   "mobileLeftColumn": 0,
@@ -38,7 +38,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "hug",
-  "rightColumn": 142.22222222222223,
+  "rightColumn": 68.60130718954248,
   "searchTags": [
     "click",
     "submit"

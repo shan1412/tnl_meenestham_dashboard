@@ -1,5 +1,5 @@
 SELECT
-    "ID",
+    "id",
     client_key,
     lang,
     photo,
@@ -7,7 +7,7 @@ SELECT
     requestor_type_name,
     "name",
     registration_number,
-    "Age",
+    "age",
     age_group,
     gender,
     requestor_contact,
@@ -58,7 +58,7 @@ SELECT
 FROM
     (
 			SELECT
-			a."ID",
+			a."id",
 			client_key,
 			lang,
 			photo,
@@ -66,7 +66,7 @@ FROM
 			requestor_type_name,
 			"name",
 			registration_number,
-			"Age",
+			"age",
 			age_group,
 			gender,
 			requestor_contact,
@@ -138,10 +138,10 @@ FROM
 			WHERE
 			'Party Cadre' = ANY(Tags)
 			AND ARRAY_LENGTH(requestor_grievances, 1) <> 0
-			AND "ClientKey" = {{appsmith.URL.queryParams.client_key	}}
+			AND "ClientKey" ={{appsmith.URL.queryParams.client_key}}
 			AND a.constituency_key = {{ui_elements_tnl.data[0]['ACKey']}}
 			GROUP BY
-			a."ID",
+			a."id",
 			client_key,
 			lang,
 			photo,
@@ -149,7 +149,7 @@ FROM
 			requestor_type_name,
 			"name",
 			registration_number,
-			"Age",
+			"age",
 			age_group,
 			gender,
 			requestor_contact,
