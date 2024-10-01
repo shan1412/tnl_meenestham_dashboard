@@ -4,7 +4,7 @@
   "allowScroll": false,
   "animateLoading": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 105.759375,
+  "bottomRow": 105.75937499999998,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "chartData": {
     "lgwz05z0w9": {
@@ -109,10 +109,10 @@
   "labelOrientation": "auto",
   "leftColumn": 0,
   "minWidth": 450,
-  "mobileBottomRow": 203.53749999999906,
+  "mobileBottomRow": 175.03593749999914,
   "mobileLeftColumn": 0,
   "mobileRightColumn": 64,
-  "mobileTopRow": 171.53749999999923,
+  "mobileTopRow": 143.0359374999993,
   "onDataPointClick": "{{grievance_age_report.myFun1();\ntotal_open_grievances_count.myFun1();\ntotal_closed_grivevances__coun.myFun1();\ntotal_grievances_count.myFun1();\naverage_ticket_time.myFun1();}}",
   "parentColumnSpace": 11.890625,
   "parentId": "zjg87kjyes",
@@ -129,7 +129,7 @@
   "tags": [
     "Display"
   ],
-  "topRow": 59.759374999999956,
+  "topRow": 59.75937499999994,
   "type": "CHART_WIDGET",
   "version": 1,
   "widgetId": "m0t7ffdi9u",

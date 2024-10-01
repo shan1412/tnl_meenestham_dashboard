@@ -38,7 +38,7 @@
   "parentId": "t1zwtp6r31",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 54.57957681692732,
+  "rightColumn": 54.51851851851852,
   "shouldTruncate": false,
   "text": "{{cader_cards_stats.getCardData.data['openGrievances']}}",
   "textAlign": "LEFT",

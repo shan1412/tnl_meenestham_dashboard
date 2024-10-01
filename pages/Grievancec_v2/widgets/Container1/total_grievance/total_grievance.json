@@ -133,7 +133,7 @@
       "minDynamicHeight": 4,
       "minHeight": 140,
       "minWidth": 450,
-      "mobileBottomRow": 158.59374999999997,
+      "mobileBottomRow": 103.984375,
       "mobileLeftColumn": 0,
       "mobileRightColumn": 64,
       "mobileTopRow": 0,
@@ -179,7 +179,7 @@
   "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 14,
-  "mobileBottomRow": 15.859374999999996,
+  "mobileBottomRow": 10.3984375,
   "mobileLeftColumn": 0,
   "mobileRightColumn": 64,
   "mobileTopRow": 0,
@@ -189,7 +189,7 @@
   "positioning": "fixed",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 26.352941176470587,
+  "rightColumn": 16,
   "searchTags": [
     "statbox"
   ],
