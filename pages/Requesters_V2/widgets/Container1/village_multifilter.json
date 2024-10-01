@@ -43,14 +43,14 @@
   "labelText": "Villages",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 89.62800875273523,
+  "leftColumn": 46.38117647058823,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 85.39999999999996,
+  "mobileBottomRow": 68.83906249999995,
   "mobileLeftColumn": 0,
   "mobileRightColumn": 64,
-  "mobileTopRow": 78.79999999999998,
+  "mobileTopRow": 62.23906249999997,
   "onOptionChange": "{{storeValue('req_village_selected_values', village_multifilter.selectedOptionLabels);\ntotal_data_counts.myFun1();}}",
   "optionLabel": "name",
   "optionValue": "code",
@@ -60,7 +60,7 @@
   "placeholderText": "Select option(s)",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 112.03501094091904,
+  "rightColumn": 57.97647058823529,
   "searchTags": [
     "dropdown",
     "tags"
@@ -70,7 +70,7 @@
   "tags": [
     "Select"
   ],
-  "topRow": 12.4,
+  "topRow": 12.399999999999999,
   "type": "MULTI_SELECT_WIDGET_V2",
   "version": 1,
   "widgetId": "qmwbhirmyb",

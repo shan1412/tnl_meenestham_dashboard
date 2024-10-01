@@ -43,14 +43,14 @@
   "labelText": "Assembly Constituency",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 44.81400437636761,
+  "leftColumn": 23.190588235294115,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 70.6,
+  "mobileBottomRow": 54.039062499999986,
   "mobileLeftColumn": 0,
   "mobileRightColumn": 64,
-  "mobileTopRow": 64,
+  "mobileTopRow": 47.43906249999999,
   "onOptionChange": "{{storeValue('req_assembly_constituency_selected_names', assembly_cons_multifilter.selectedOptionLabels);\ntotal_data_counts.myFun1();}}",
   "optionLabel": "name",
   "optionValue": "code",
@@ -60,7 +60,7 @@
   "placeholderText": "Select option(s)",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 67.22100656455142,
+  "rightColumn": 34.78588235294117,
   "searchTags": [
     "dropdown",
     "tags"
@@ -70,7 +70,7 @@
   "tags": [
     "Select"
   ],
-  "topRow": 12.4,
+  "topRow": 12.399999999999999,
   "type": "MULTI_SELECT_WIDGET_V2",
   "version": 1,
   "widgetId": "wabxuj86qh",

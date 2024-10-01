@@ -43,14 +43,14 @@
   "labelText": "Mandal",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 67.22100656455142,
+  "leftColumn": 34.78588235294117,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 77.99999999999999,
+  "mobileBottomRow": 61.43906249999997,
   "mobileLeftColumn": 0,
   "mobileRightColumn": 64,
-  "mobileTopRow": 71.39999999999999,
+  "mobileTopRow": 54.83906249999998,
   "onOptionChange": "{{storeValue('req_mandal_selected_values', mandal_multifilter.selectedOptionLabels);\ntotal_data_counts.myFun1();}}",
   "optionLabel": "name",
   "optionValue": "code",
@@ -60,7 +60,7 @@
   "placeholderText": "Select option(s)",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 89.62800875273523,
+  "rightColumn": 46.38117647058823,
   "searchTags": [
     "dropdown",
     "tags"
@@ -70,7 +70,7 @@
   "tags": [
     "Select"
   ],
-  "topRow": 12.4,
+  "topRow": 12.399999999999999,
   "type": "MULTI_SELECT_WIDGET_V2",
   "version": 1,
   "widgetId": "dzqm9kre7q",
