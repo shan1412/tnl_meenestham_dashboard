@@ -43,7 +43,7 @@
   "labelText": "Assembly Constituency",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 14.494117647058822,
+  "leftColumn": 16.357827476038338,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -60,7 +60,7 @@
   "placeholderText": "Select option(s)",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 28.988235294117644,
+  "rightColumn": 32.715654952076676,
   "searchTags": [
     "dropdown",
     "tags"

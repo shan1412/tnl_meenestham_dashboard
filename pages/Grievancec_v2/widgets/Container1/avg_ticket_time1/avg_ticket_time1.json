@@ -171,7 +171,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "8oh8zvjf7z",
-  "leftColumn": 63.247058823529414,
+  "leftColumn": 85.87859424920127,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 14,
   "mobileBottomRow": 68.95624999999998,
@@ -184,7 +184,7 @@
   "positioning": "fixed",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 84.32941176470588,
+  "rightColumn": 114.50479233226837,
   "searchTags": [
     "statbox"
   ],

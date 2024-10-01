@@ -171,7 +171,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "esogapiosz",
-  "leftColumn": 42.16470588235294,
+  "leftColumn": 57.25239616613418,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 14,
   "mobileBottomRow": 51.51718749999999,
@@ -184,7 +184,7 @@
   "positioning": "fixed",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 63.247058823529414,
+  "rightColumn": 85.87859424920127,
   "searchTags": [
     "statbox"
   ],

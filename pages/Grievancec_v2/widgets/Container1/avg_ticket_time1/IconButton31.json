@@ -2,7 +2,7 @@
   "alignment": "start",
   "animateLoading": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 9.918750000000001,
+  "bottomRow": 9.91875,
   "boxShadow": "none",
   "buttonColor": "{{utills.myFun1.data.secondarylight}}",
   "buttonStyle": "PRIMARY",
